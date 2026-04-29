@@ -1,0 +1,74 @@
+{
+  "experiment": "exp5_noise_amplification",
+  "protein": "pair_05081",
+  "L": 265,
+  "n_trials": 50,
+  "job399_obs_epsilon": 0.02,
+  "job399_obs_rmsd": 17.82,
+  "job399_obs_amplification": 891,
+  "results": [
+    {
+      "epsilon_rad": 0.001,
+      "mean_rmsd_angstrom": 0.24173024117946626,
+      "std_rmsd_angstrom": 0.04444515602337485,
+      "amplification_factor": 241.73024117946625,
+      "theory_angstrom": 0.04365867611368902
+    },
+    {
+      "epsilon_rad": 0.002,
+      "mean_rmsd_angstrom": 0.45947962313890456,
+      "std_rmsd_angstrom": 0.10533382507202312,
+      "amplification_factor": 229.73981156945229,
+      "theory_angstrom": 0.08731735222737803
+    },
+    {
+      "epsilon_rad": 0.005,
+      "mean_rmsd_angstrom": 1.2306857001781464,
+      "std_rmsd_angstrom": 0.28534721794960904,
+      "amplification_factor": 246.13714003562927,
+      "theory_angstrom": 0.21829338056844508
+    },
+    {
+      "epsilon_rad": 0.01,
+      "mean_rmsd_angstrom": 2.2837468552589417,
+      "std_rmsd_angstrom": 0.524943380255197,
+      "amplification_factor": 228.37468552589417,
+      "theory_angstrom": 0.43658676113689016
+    },
+    {
+      "epsilon_rad": 0.02,
+      "mean_rmsd_angstrom": 4.945916953086853,
+      "std_rmsd_angstrom": 1.0013911365937747,
+      "amplification_factor": 247.29584765434268,
+      "theory_angstrom": 0.8731735222737803
+    },
+    {
+      "epsilon_rad": 0.05,
+      "mean_rmsd_angstrom": 11.409295597076415,
+      "std_rmsd_angstrom": 2.3702094402359988,
+      "amplification_factor": 228.1859119415283,
+      "theory_angstrom": 2.182933805684451
+    },
+    {
+      "epsilon_rad": 0.1,
+      "mean_rmsd_angstrom": 18.104380989074706,
+      "std_rmsd_angstrom": 2.920723871556855,
+      "amplification_factor": 181.04380989074704,
+      "theory_angstrom": 4.365867611368902
+    },
+    {
+      "epsilon_rad": 0.2,
+      "mean_rmsd_angstrom": 24.786402587890624,
+      "std_rmsd_angstrom": 4.3863641540468175,
+      "amplification_factor": 123.93201293945312,
+      "theory_angstrom": 8.731735222737804
+    },
+    {
+      "epsilon_rad": 0.5,
+      "mean_rmsd_angstrom": 22.72115135192871,
+      "std_rmsd_angstrom": 3.630092716636128,
+      "amplification_factor": 45.44230270385742,
+      "theory_angstrom": 21.82933805684451
+    }
+  ]
+}

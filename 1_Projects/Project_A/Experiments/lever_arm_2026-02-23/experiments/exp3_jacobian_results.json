@@ -1,0 +1,217 @@
+{
+  "experiment": "exp3_jacobian",
+  "protein": "pair_05081",
+  "L": 265,
+  "numerical_eps": 0.0001,
+  "phi_max_norm": 455.8809509277344,
+  "phi_min_norm": 1.386448621749878,
+  "phi_n_over_c_ratio": 328.81200247019143,
+  "psi_max_norm": 502.4644470214844,
+  "psi_n_over_c_ratio": 17.07625792523952,
+  "by_position": [
+    {
+      "j": 0,
+      "jacobian_norm_phi": 0.0,
+      "jacobian_norm_psi": 433.67303466796875,
+      "jacobian_norm_omega": 369.02252197265625
+    },
+    {
+      "j": 8,
+      "jacobian_norm_phi": 395.181396484375,
+      "jacobian_norm_psi": 477.66680908203125,
+      "jacobian_norm_omega": 446.4864196777344
+    },
+    {
+      "j": 16,
+      "jacobian_norm_phi": 395.11566162109375,
+      "jacobian_norm_psi": 419.857177734375,
+      "jacobian_norm_omega": 432.4227600097656
+    },
+    {
+      "j": 24,
+      "jacobian_norm_phi": 455.8809509277344,
+      "jacobian_norm_psi": 353.2314453125,
+      "jacobian_norm_omega": 475.2840576171875
+    },
+    {
+      "j": 32,
+      "jacobian_norm_phi": 353.66778564453125,
+      "jacobian_norm_psi": 423.5269470214844,
+      "jacobian_norm_omega": 375.10797119140625
+    },
+    {
+      "j": 40,
+      "jacobian_norm_phi": 365.67132568359375,
+      "jacobian_norm_psi": 448.27349853515625,
+      "jacobian_norm_omega": 446.466064453125
+    },
+    {
+      "j": 48,
+      "jacobian_norm_phi": 445.2705383300781,
+      "jacobian_norm_psi": 433.0457763671875,
+      "jacobian_norm_omega": 431.56817626953125
+    },
+    {
+      "j": 56,
+      "jacobian_norm_phi": 340.9298095703125,
+      "jacobian_norm_psi": 418.1239013671875,
+      "jacobian_norm_omega": 351.9707336425781
+    },
+    {
+      "j": 64,
+      "jacobian_norm_phi": 424.21478271484375,
+      "jacobian_norm_psi": 361.31988525390625,
+      "jacobian_norm_omega": 372.16741943359375
+    },
+    {
+      "j": 72,
+      "jacobian_norm_phi": 319.4330139160156,
+      "jacobian_norm_psi": 379.4898376464844,
+      "jacobian_norm_omega": 461.1003723144531
+    },
+    {
+      "j": 80,
+      "jacobian_norm_phi": 328.6036682128906,
+      "jacobian_norm_psi": 502.4644470214844,
+      "jacobian_norm_omega": 301.2373046875
+    },
+    {
+      "j": 88,
+      "jacobian_norm_phi": 359.7902526855469,
+      "jacobian_norm_psi": 395.7585754394531,
+      "jacobian_norm_omega": 335.5322570800781
+    },
+    {
+      "j": 96,
+      "jacobian_norm_phi": 353.3233642578125,
+      "jacobian_norm_psi": 342.1827697753906,
+      "jacobian_norm_omega": 287.9012756347656
+    },
+    {
+      "j": 104,
+      "jacobian_norm_phi": 331.8564453125,
+      "jacobian_norm_psi": 328.8204650878906,
+      "jacobian_norm_omega": 326.8030090332031
+    },
+    {
+      "j": 112,
+      "jacobian_norm_phi": 302.1311950683594,
+      "jacobian_norm_psi": 282.0323791503906,
+      "jacobian_norm_omega": 258.65008544921875
+    },
+    {
+      "j": 120,
+      "jacobian_norm_phi": 277.80279541015625,
+      "jacobian_norm_psi": 295.32720947265625,
+      "jacobian_norm_omega": 354.3995361328125
+    },
+    {
+      "j": 128,
+      "jacobian_norm_phi": 270.4356994628906,
+      "jacobian_norm_psi": 290.6163330078125,
+      "jacobian_norm_omega": 295.22027587890625
+    },
+    {
+      "j": 136,
+      "jacobian_norm_phi": 292.2217712402344,
+      "jacobian_norm_psi": 294.8576965332031,
+      "jacobian_norm_omega": 325.0673828125
+    },
+    {
+      "j": 144,
+      "jacobian_norm_phi": 318.15875244140625,
+      "jacobian_norm_psi": 268.76605224609375,
+      "jacobian_norm_omega": 292.12579345703125
+    },
+    {
+      "j": 152,
+      "jacobian_norm_phi": 318.89007568359375,
+      "jacobian_norm_psi": 348.16650390625,
+      "jacobian_norm_omega": 281.9443359375
+    },
+    {
+      "j": 160,
+      "jacobian_norm_phi": 362.85858154296875,
+      "jacobian_norm_psi": 343.5817565917969,
+      "jacobian_norm_omega": 390.9270324707031
+    },
+    {
+      "j": 168,
+      "jacobian_norm_phi": 247.0025634765625,
+      "jacobian_norm_psi": 161.19554138183594,
+      "jacobian_norm_omega": 231.22837829589844
+    },
+    {
+      "j": 176,
+      "jacobian_norm_phi": 234.29428100585938,
+      "jacobian_norm_psi": 218.06396484375,
+      "jacobian_norm_omega": 296.9150390625
+    },
+    {
+      "j": 184,
+      "jacobian_norm_phi": 184.7987823486328,
+      "jacobian_norm_psi": 188.3858642578125,
+      "jacobian_norm_omega": 216.85546875
+    },
+    {
+      "j": 192,
+      "jacobian_norm_phi": 157.70799255371094,
+      "jacobian_norm_psi": 179.25660705566406,
+      "jacobian_norm_omega": 174.44749450683594
+    },
+    {
+      "j": 200,
+      "jacobian_norm_phi": 184.70846557617188,
+      "jacobian_norm_psi": 206.57568359375,
+      "jacobian_norm_omega": 203.91212463378906
+    },
+    {
+      "j": 208,
+      "jacobian_norm_phi": 280.5108337402344,
+      "jacobian_norm_psi": 237.2327880859375,
+      "jacobian_norm_omega": 283.861328125
+    },
+    {
+      "j": 216,
+      "jacobian_norm_phi": 185.9433135986328,
+      "jacobian_norm_psi": 212.141357421875,
+      "jacobian_norm_omega": 121.42974853515625
+    },
+    {
+      "j": 224,
+      "jacobian_norm_phi": 132.00811767578125,
+      "jacobian_norm_psi": 189.40908813476562,
+      "jacobian_norm_omega": 129.18161010742188
+    },
+    {
+      "j": 232,
+      "jacobian_norm_phi": 104.22960662841797,
+      "jacobian_norm_psi": 102.95547485351562,
+      "jacobian_norm_omega": 113.58186340332031
+    },
+    {
+      "j": 240,
+      "jacobian_norm_phi": 105.42432403564453,
+      "jacobian_norm_psi": 97.21558380126953,
+      "jacobian_norm_omega": 72.48064422607422
+    },
+    {
+      "j": 248,
+      "jacobian_norm_phi": 91.81340789794922,
+      "jacobian_norm_psi": 47.12420654296875,
+      "jacobian_norm_omega": 84.5167007446289
+    },
+    {
+      "j": 256,
+      "jacobian_norm_phi": 40.58351516723633,
+      "jacobian_norm_psi": 29.424739837646484,
+      "jacobian_norm_omega": 36.30661392211914
+    },
+    {
+      "j": 264,
+      "jacobian_norm_phi": 1.386448621749878,
+      "jacobian_norm_psi": 0.0,
+      "jacobian_norm_omega": 0.0
+    }
+  ]
+}

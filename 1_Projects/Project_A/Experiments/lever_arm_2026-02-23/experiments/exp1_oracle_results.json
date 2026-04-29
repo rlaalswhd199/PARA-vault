@@ -1,0 +1,11 @@
+{
+  "experiment": "exp1_oracle_baseline",
+  "protein": "pair_05081",
+  "L": 265,
+  "roundtrip_rmsd_ca_angstrom": 0.00013889897672925144,
+  "roundtrip_rmsd_all_angstrom": 0.00013818535080645233,
+  "feature_mae_rad": 4.276301410754968e-07,
+  "feature_max_error_rad": 2.7418136596679688e-06,
+  "apo_holo_rmsd_angstrom": 5.706862926483154,
+  "conclusion": "NERF round-trip error is negligible. Decoder is lossless."
+}

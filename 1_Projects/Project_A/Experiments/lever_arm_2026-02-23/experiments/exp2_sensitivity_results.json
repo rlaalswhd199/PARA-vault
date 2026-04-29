@@ -1,0 +1,383 @@
+{
+  "experiment": "exp2_sensitivity",
+  "protein": "pair_05081",
+  "L": 265,
+  "epsilon_rad": 0.02,
+  "rmsd_j0_angstrom": 0.0016843014163896441,
+  "rmsd_jN_angstrom": 0.03553562983870506,
+  "n_over_c_ratio": 0.047397526090275144,
+  "theory_j0_angstrom": 1.2371903653035776,
+  "by_position": [
+    {
+      "j": 0,
+      "rmsd_angstrom": 0.0016843014163896441,
+      "theory_angstrom": 1.2371903653035776,
+      "n_downstream": 265,
+      "amplification_factor": 0.08421507081948221
+    },
+    {
+      "j": 5,
+      "rmsd_angstrom": 0.050624698400497437,
+      "theory_angstrom": 1.2254631777413794,
+      "n_downstream": 260,
+      "amplification_factor": 2.531234920024872
+    },
+    {
+      "j": 10,
+      "rmsd_angstrom": 0.08508846163749695,
+      "theory_angstrom": 1.2136226761230196,
+      "n_downstream": 255,
+      "amplification_factor": 4.254423081874847
+    },
+    {
+      "j": 15,
+      "rmsd_angstrom": 0.18845731019973755,
+      "theory_angstrom": 1.201665510863984,
+      "n_downstream": 250,
+      "amplification_factor": 9.422865509986877
+    },
+    {
+      "j": 20,
+      "rmsd_angstrom": 0.16055698692798615,
+      "theory_angstrom": 1.1895881640298882,
+      "n_downstream": 245,
+      "amplification_factor": 8.027849346399307
+    },
+    {
+      "j": 25,
+      "rmsd_angstrom": 0.12594114243984222,
+      "theory_angstrom": 1.1773869372470547,
+      "n_downstream": 240,
+      "amplification_factor": 6.297057121992111
+    },
+    {
+      "j": 30,
+      "rmsd_angstrom": 0.17577093839645386,
+      "theory_angstrom": 1.1650579384734476,
+      "n_downstream": 235,
+      "amplification_factor": 8.788546919822693
+    },
+    {
+      "j": 35,
+      "rmsd_angstrom": 0.16385012865066528,
+      "theory_angstrom": 1.1525970674958357,
+      "n_downstream": 230,
+      "amplification_factor": 8.192506432533264
+    },
+    {
+      "j": 40,
+      "rmsd_angstrom": 0.1720622032880783,
+      "theory_angstrom": 1.14,
+      "n_downstream": 225,
+      "amplification_factor": 8.603110164403915
+    },
+    {
+      "j": 45,
+      "rmsd_angstrom": 0.2502584457397461,
+      "theory_angstrom": 1.1272621700385408,
+      "n_downstream": 220,
+      "amplification_factor": 12.512922286987305
+    },
+    {
+      "j": 50,
+      "rmsd_angstrom": 0.28079667687416077,
+      "theory_angstrom": 1.1143787506947536,
+      "n_downstream": 215,
+      "amplification_factor": 14.039833843708038
+    },
+    {
+      "j": 55,
+      "rmsd_angstrom": 0.25289300084114075,
+      "theory_angstrom": 1.1013446327103973,
+      "n_downstream": 210,
+      "amplification_factor": 12.644650042057037
+    },
+    {
+      "j": 60,
+      "rmsd_angstrom": 0.21695616841316223,
+      "theory_angstrom": 1.088154400809003,
+      "n_downstream": 205,
+      "amplification_factor": 10.847808420658112
+    },
+    {
+      "j": 65,
+      "rmsd_angstrom": 0.3893289864063263,
+      "theory_angstrom": 1.0748023074035522,
+      "n_downstream": 200,
+      "amplification_factor": 19.466449320316315
+    },
+    {
+      "j": 70,
+      "rmsd_angstrom": 0.3161250650882721,
+      "theory_angstrom": 1.0612822433264395,
+      "n_downstream": 195,
+      "amplification_factor": 15.806253254413605
+    },
+    {
+      "j": 75,
+      "rmsd_angstrom": 0.31276535987854004,
+      "theory_angstrom": 1.047587705158857,
+      "n_downstream": 190,
+      "amplification_factor": 15.638267993927002
+    },
+    {
+      "j": 80,
+      "rmsd_angstrom": 0.2721192240715027,
+      "theory_angstrom": 1.0337117586638938,
+      "n_downstream": 185,
+      "amplification_factor": 13.605961203575134
+    },
+    {
+      "j": 85,
+      "rmsd_angstrom": 0.28512248396873474,
+      "theory_angstrom": 1.019646997739904,
+      "n_downstream": 180,
+      "amplification_factor": 14.256124198436737
+    },
+    {
+      "j": 90,
+      "rmsd_angstrom": 0.29777029156684875,
+      "theory_angstrom": 1.0053854982045445,
+      "n_downstream": 175,
+      "amplification_factor": 14.888514578342438
+    },
+    {
+      "j": 95,
+      "rmsd_angstrom": 0.31611618399620056,
+      "theory_angstrom": 0.9909187655908026,
+      "n_downstream": 170,
+      "amplification_factor": 15.805809199810028
+    },
+    {
+      "j": 100,
+      "rmsd_angstrom": 0.3703784942626953,
+      "theory_angstrom": 0.9762376759785498,
+      "n_downstream": 165,
+      "amplification_factor": 18.518924713134766
+    },
+    {
+      "j": 105,
+      "rmsd_angstrom": 0.39368632435798645,
+      "theory_angstrom": 0.9613324086911873,
+      "n_downstream": 160,
+      "amplification_factor": 19.684316217899323
+    },
+    {
+      "j": 110,
+      "rmsd_angstrom": 0.23225918412208557,
+      "theory_angstrom": 0.9461923694471437,
+      "n_downstream": 155,
+      "amplification_factor": 11.612959206104279
+    },
+    {
+      "j": 115,
+      "rmsd_angstrom": 0.28750211000442505,
+      "theory_angstrom": 0.9308061022576076,
+      "n_downstream": 150,
+      "amplification_factor": 14.375105500221252
+    },
+    {
+      "j": 120,
+      "rmsd_angstrom": 0.31442707777023315,
+      "theory_angstrom": 0.9151611879882144,
+      "n_downstream": 145,
+      "amplification_factor": 15.721353888511658
+    },
+    {
+      "j": 125,
+      "rmsd_angstrom": 0.3791610598564148,
+      "theory_angstrom": 0.8992441270311416,
+      "n_downstream": 140,
+      "amplification_factor": 18.95805299282074
+    },
+    {
+      "j": 130,
+      "rmsd_angstrom": 0.3286069929599762,
+      "theory_angstrom": 0.883040202935291,
+      "n_downstream": 135,
+      "amplification_factor": 16.43034964799881
+    },
+    {
+      "j": 135,
+      "rmsd_angstrom": 0.26176702976226807,
+      "theory_angstrom": 0.8665333230753448,
+      "n_downstream": 130,
+      "amplification_factor": 13.088351488113403
+    },
+    {
+      "j": 140,
+      "rmsd_angstrom": 0.347800612449646,
+      "theory_angstrom": 0.8497058314499201,
+      "n_downstream": 125,
+      "amplification_factor": 17.3900306224823
+    },
+    {
+      "j": 145,
+      "rmsd_angstrom": 0.31312745809555054,
+      "theory_angstrom": 0.8325382874078525,
+      "n_downstream": 120,
+      "amplification_factor": 15.656372904777527
+    },
+    {
+      "j": 150,
+      "rmsd_angstrom": 0.3078409433364868,
+      "theory_angstrom": 0.8150092024020341,
+      "n_downstream": 115,
+      "amplification_factor": 15.39204716682434
+    },
+    {
+      "j": 155,
+      "rmsd_angstrom": 0.44184160232543945,
+      "theory_angstrom": 0.7970947246093152,
+      "n_downstream": 110,
+      "amplification_factor": 22.092080116271973
+    },
+    {
+      "j": 160,
+      "rmsd_angstrom": 0.4071798026561737,
+      "theory_angstrom": 0.7787682582129294,
+      "n_downstream": 105,
+      "amplification_factor": 20.358990132808685
+    },
+    {
+      "j": 165,
+      "rmsd_angstrom": 0.24666833877563477,
+      "theory_angstrom": 0.76,
+      "n_downstream": 100,
+      "amplification_factor": 12.333416938781738
+    },
+    {
+      "j": 170,
+      "rmsd_angstrom": 0.22518664598464966,
+      "theory_angstrom": 0.7407563702054811,
+      "n_downstream": 95,
+      "amplification_factor": 11.259332299232483
+    },
+    {
+      "j": 175,
+      "rmsd_angstrom": 0.3330671191215515,
+      "theory_angstrom": 0.7209993065183905,
+      "n_downstream": 90,
+      "amplification_factor": 16.653355956077576
+    },
+    {
+      "j": 180,
+      "rmsd_angstrom": 0.4108128547668457,
+      "theory_angstrom": 0.7006853787542594,
+      "n_downstream": 85,
+      "amplification_factor": 20.540642738342285
+    },
+    {
+      "j": 185,
+      "rmsd_angstrom": 0.2221519947052002,
+      "theory_angstrom": 0.679764665159936,
+      "n_downstream": 80,
+      "amplification_factor": 11.10759973526001
+    },
+    {
+      "j": 190,
+      "rmsd_angstrom": 0.20857343077659607,
+      "theory_angstrom": 0.6581793068761734,
+      "n_downstream": 75,
+      "amplification_factor": 10.428671538829803
+    },
+    {
+      "j": 195,
+      "rmsd_angstrom": 0.19685836136341095,
+      "theory_angstrom": 0.6358616201658974,
+      "n_downstream": 70,
+      "amplification_factor": 9.842918068170547
+    },
+    {
+      "j": 200,
+      "rmsd_angstrom": 0.24770884215831757,
+      "theory_angstrom": 0.6127315888706897,
+      "n_downstream": 65,
+      "amplification_factor": 12.385442107915878
+    },
+    {
+      "j": 205,
+      "rmsd_angstrom": 0.19723786413669586,
+      "theory_angstrom": 0.5886934686235273,
+      "n_downstream": 60,
+      "amplification_factor": 9.861893206834793
+    },
+    {
+      "j": 210,
+      "rmsd_angstrom": 0.3285681903362274,
+      "theory_angstrom": 0.5636310850192704,
+      "n_downstream": 55,
+      "amplification_factor": 16.42840951681137
+    },
+    {
+      "j": 215,
+      "rmsd_angstrom": 0.17747226357460022,
+      "theory_angstrom": 0.5374011537017761,
+      "n_downstream": 50,
+      "amplification_factor": 8.873613178730011
+    },
+    {
+      "j": 220,
+      "rmsd_angstrom": 0.28914356231689453,
+      "theory_angstrom": 0.509823498869952,
+      "n_downstream": 45,
+      "amplification_factor": 14.457178115844727
+    },
+    {
+      "j": 225,
+      "rmsd_angstrom": 0.2606770396232605,
+      "theory_angstrom": 0.48066620434559365,
+      "n_downstream": 40,
+      "amplification_factor": 13.033851981163025
+    },
+    {
+      "j": 230,
+      "rmsd_angstrom": 0.13570384681224823,
+      "theory_angstrom": 0.4496220635155708,
+      "n_downstream": 35,
+      "amplification_factor": 6.7851923406124115
+    },
+    {
+      "j": 235,
+      "rmsd_angstrom": 0.10427853465080261,
+      "theory_angstrom": 0.41626914370392626,
+      "n_downstream": 30,
+      "amplification_factor": 5.213926732540131
+    },
+    {
+      "j": 240,
+      "rmsd_angstrom": 0.08893068134784698,
+      "theory_angstrom": 0.38,
+      "n_downstream": 25,
+      "amplification_factor": 4.446534067392349
+    },
+    {
+      "j": 245,
+      "rmsd_angstrom": 0.054484184831380844,
+      "theory_angstrom": 0.339882332579968,
+      "n_downstream": 20,
+      "amplification_factor": 2.724209241569042
+    },
+    {
+      "j": 250,
+      "rmsd_angstrom": 0.0828879252076149,
+      "theory_angstrom": 0.29434673431176367,
+      "n_downstream": 15,
+      "amplification_factor": 4.144396260380745
+    },
+    {
+      "j": 255,
+      "rmsd_angstrom": 0.07237439602613449,
+      "theory_angstrom": 0.24033310217279683,
+      "n_downstream": 10,
+      "amplification_factor": 3.6187198013067245
+    },
+    {
+      "j": 260,
+      "rmsd_angstrom": 0.03553562983870506,
+      "theory_angstrom": 0.169941166289984,
+      "n_downstream": 5,
+      "amplification_factor": 1.7767814919352531
+    }
+  ]
+}

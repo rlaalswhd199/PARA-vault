@@ -1,0 +1,75 @@
+{
+  "experiment": "exp4_chain_length",
+  "protein": "pair_05081",
+  "L_full": 265,
+  "epsilon_rad": 0.02,
+  "log_log_slope": -0.4880122752643119,
+  "results": [
+    {
+      "L": 20,
+      "rmsd_angstrom": 0.004409938585013151,
+      "theory_angstrom": 0.9104152898540313,
+      "ratio_obs_over_theory": 0.004843875740796761
+    },
+    {
+      "L": 30,
+      "rmsd_angstrom": 0.003626458812505007,
+      "theory_angstrom": 1.3492229862653047,
+      "ratio_obs_over_theory": 0.0026878127800542746
+    },
+    {
+      "L": 50,
+      "rmsd_angstrom": 0.0028364260215312243,
+      "theory_angstrom": 2.226812969245509,
+      "ratio_obs_over_theory": 0.0012737603238203979
+    },
+    {
+      "L": 70,
+      "rmsd_angstrom": 0.0024021826684474945,
+      "theory_angstrom": 3.1043930163560156,
+      "ratio_obs_over_theory": 0.00077380107739361
+    },
+    {
+      "L": 100,
+      "rmsd_angstrom": 0.0020189504139125347,
+      "theory_angstrom": 4.420757401170075,
+      "ratio_obs_over_theory": 0.00045669785200408994
+    },
+    {
+      "L": 130,
+      "rmsd_angstrom": 0.0017746640369296074,
+      "theory_angstrom": 5.737119137685743,
+      "ratio_obs_over_theory": 0.00030933016924452006
+    },
+    {
+      "L": 150,
+      "rmsd_angstrom": 0.001651887665502727,
+      "theory_angstrom": 6.614692938199525,
+      "ratio_obs_over_theory": 0.0002497300597985217
+    },
+    {
+      "L": 180,
+      "rmsd_angstrom": 0.0015117520233616233,
+      "theory_angstrom": 7.931053061647404,
+      "ratio_obs_over_theory": 0.00019061176488226534
+    },
+    {
+      "L": 200,
+      "rmsd_angstrom": 0.0014358157059177756,
+      "theory_angstrom": 8.808626226603101,
+      "ratio_obs_over_theory": 0.00016300109317289794
+    },
+    {
+      "L": 230,
+      "rmsd_angstrom": 0.0013411304680630565,
+      "theory_angstrom": 10.124985728385003,
+      "ratio_obs_over_theory": 0.00013245751675270754
+    },
+    {
+      "L": 265,
+      "rmsd_angstrom": 0.001253623398952186,
+      "theory_angstrom": 11.66073822705921,
+      "ratio_obs_over_theory": 0.0001075080645381458
+    }
+  ]
+}
