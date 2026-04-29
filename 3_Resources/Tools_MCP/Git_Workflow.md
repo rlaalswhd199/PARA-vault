@@ -78,13 +78,13 @@ git push
 
 같은 파일을 여러 머신에서 동시에 편집하지 않는 게 가장 큰 원칙입니다. PARA 구조 안에서 권장되는 zone:
 
-| 영역 | 주로 편집하는 머신 |
-|------|-------------------|
-| `2_Areas/Daily_Plans/`, `Meeting_Minutes/` | 로컬 데스크탑 / 노트북 |
-| `3_Resources/Papers/` (Reading Notes) | 로컬 (Obsidian으로 작성) |
-| `Paper_Writing/Project_X/` | 로컬 (초안), 서버 (figure 경로 참조 시 가끔) |
-| `1_Projects/Project_X/README.md` 로그 | 로컬 + 서버 — 단, 같은 줄 동시 편집 X |
-| 코드 repo `src/`, `Experiments/` | 서버 |
+| 영역                                         | 주로 편집하는 머신                      |
+| ------------------------------------------ | ------------------------------- |
+| `2_Areas/Daily_Plans/`, `Meeting_Minutes/` | 로컬 데스크탑 / 노트북                   |
+| `3_Resources/Papers/` (Reading Notes)      | 로컬 (Obsidian으로 작성)              |
+| `Paper_Writing/Project_X/`                 | 로컬 (초안), 서버 (figure 경로 참조 시 가끔) |
+| `1_Projects/Project_X/README.md` 로그        | 로컬 + 서버 — 단, 같은 줄 동시 편집 X       |
+| 코드 repo `src/`, `Experiments/`             | 서버                              |
 
 서버에서 vault를 **읽기 위주**로 쓰고 (CLAUDE.md, README, Reading_Notes 참고), 쓰기는 코드 repo 위주로 하면 충돌이 거의 안 생깁니다.
 

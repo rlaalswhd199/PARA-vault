@@ -7,10 +7,10 @@
 
 ## Vault 소유자
 
-- **이름**: Islambek (ashyrmamatov@snu.ac.kr)
+- **이름**: MinJong Kim (rlaalswhd199@snu.ac.kr)
 - **소속**: SNU
 - **역할**: 대학원생
-- **연구 분야**: (예: 로보틱스 / ML / NLP / Vision 등 — 채워주세요)
+- **연구 분야**: ML, DL, AI, AI based Drug Design, Protein Design, Docking, CADD
 
 ---
 
