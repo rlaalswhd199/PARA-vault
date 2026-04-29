@@ -1,0 +1,27 @@
+% Project A — Main paper file
+% Compile with pdflatex / latexmk
+
+\documentclass{article}
+
+\input{math_commands.tex}
+
+\title{Project A: Working Title}
+\author{Islambek \\ Seoul National University \\ \texttt{ashyrmamatov@snu.ac.kr}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{Sections/abstract.tex}
+\end{abstract}
+
+\input{Sections/introduction.tex}
+\input{Sections/method.tex}
+\input{Sections/experiments.tex}
+\input{Sections/analysis.tex}
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}

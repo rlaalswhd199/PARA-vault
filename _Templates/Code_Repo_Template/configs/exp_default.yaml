@@ -1,0 +1,21 @@
+# Default experiment config — copy this for new runs as exp001.yaml etc.
+
+run_name: default
+seed: 0
+
+model:
+  name: replace_me
+  dim: 256
+
+data:
+  name: replace_me
+  batch_size: 32
+
+optim:
+  lr: 1.0e-4
+  weight_decay: 0.0
+  epochs: 10
+
+logging:
+  wandb_project: proj-x
+  log_every: 50

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proj-x"
+version = "0.0.1"
+description = "Research code for proj-x"
+authors = [{ name = "Islambek", email = "ashyrmamatov@snu.ac.kr" }]
+requires-python = ">=3.10"
+dependencies = [
+    # "torch",
+    # "numpy",
+    # "wandb",
+    # "hydra-core",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "ipython"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

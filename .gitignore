@@ -1,0 +1,71 @@
+# ---------------------------------------------------------
+# PARA Vault .gitignore
+# ---------------------------------------------------------
+# 원칙:
+#   - 노트(.md), 논문 원고(.tex)는 모두 추적
+#   - Obsidian의 휘발성 설정·캐시는 무시
+#   - LaTeX 빌드 산출물은 무시
+#   - 무거운 실험 결과·체크포인트는 코드 repo가 책임 (vault에 들어올 일 없음)
+# ---------------------------------------------------------
+
+# Obsidian — 매 세션 바뀌는 파일들 (충돌 유발기)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/.trash/
+.obsidian/plugins/*/data.json
+# 단, 플러그인 목록·핵심 설정은 공유하고 싶다면 위 줄들을 선별 조정.
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+.Spotlight-V100
+.Trashes
+
+# 에디터 임시
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python (vault 안에 ad-hoc 스크립트 둘 때 대비)
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# LaTeX 빌드 산출물
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.run.xml
+*.bcf
+# main.pdf는 추적 — 원하면 아래 한 줄 제거
+# *.pdf
+
+# 만에 하나 vault 안에 무거운 산출물이 들어오는 사고 방지
+*.ckpt
+*.pth
+*.pt
+*.bin
+*.h5
+*.npy
+*.npz
+wandb/
