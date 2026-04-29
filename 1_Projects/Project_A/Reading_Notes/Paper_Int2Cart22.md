@@ -19,7 +19,7 @@
 ![[3_Resources/Papers/Paper_Int2Cart22_arch.png]]
 
 <details>
-<summary>📐 Mermaid source — 수정 후 <code>scripts/render_mermaids.sh</code> 재실행</summary>
+<summary>Mermaid source</summary>
 
 ```mermaid
 %%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
