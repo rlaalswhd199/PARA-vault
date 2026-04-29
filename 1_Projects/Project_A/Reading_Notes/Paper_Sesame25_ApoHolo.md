@@ -17,6 +17,7 @@
 ## 핵심 아키텍처
 
 ```mermaid
+%%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
 flowchart TB
     subgraph INPUT["입력"]
         APO["Apo 구조\n(Rᵢᵃᵖᵒ, tᵢᵃᵖᵒ) × L"]

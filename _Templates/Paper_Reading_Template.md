@@ -18,6 +18,7 @@
 ## 핵심 아키텍처
 
 ```mermaid
+%%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
 flowchart TB
     %% 논문의 핵심 모델 구조를 여기에 그린다.
     %% 예시 구조 (실제 논문에 맞게 교체할 것):

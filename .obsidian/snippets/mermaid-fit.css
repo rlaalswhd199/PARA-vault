@@ -1,0 +1,33 @@
+/* ============================================================
+ * Mermaid 한눈에 들어오게 — 노트 폭에 맞춰 축소, 너무 큰 다이어그램은
+ * 가로 스크롤 허용. 클릭 줌이 필요하면 Image Toolkit 류 플러그인을 함께.
+ *
+ * 사용: Settings → Appearance → CSS snippets에서 mermaid-fit 토글 ON
+ * ============================================================ */
+
+.markdown-preview-view .mermaid svg,
+.markdown-rendered .mermaid svg,
+.cm-preview-code-block .mermaid svg {
+    max-width: 100% !important;
+    max-height: 70vh;          /* 화면 높이의 70%까지만 차지 */
+    height: auto !important;
+    width: auto !important;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 너무 가로로 길 때만 가로 스크롤 (잘려 보이지 않게) */
+.markdown-preview-view .mermaid,
+.markdown-rendered .mermaid,
+.cm-preview-code-block .mermaid {
+    overflow-x: auto;
+    overflow-y: visible;
+    text-align: center;
+}
+
+/* 다이어그램 호버 시 살짝 강조 — 어디가 클릭 영역인지 힌트 */
+.markdown-preview-view .mermaid:hover,
+.markdown-rendered .mermaid:hover {
+    outline: 1px dashed var(--background-modifier-border-hover);
+    outline-offset: 4px;
+}
