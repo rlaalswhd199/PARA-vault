@@ -26,4 +26,4 @@
 └── Reading_Notes/         # 이 프로젝트와 직접 관련된 논문 노트
 ```
 
-논문 원고는 `Paper_Writing/Project_X/` (vault 루트), 코드·실험은 별도 코드 repo (`~/code/proj-x/`)에서 관리합니다. 자세한 흐름은 [[../3_Resources/Tools_MCP/Git_Workflow]] 참조.
+논문 원고는 `Paper_Writing/Project_X/` (vault 루트), 코드·실험은 별도 코드 repo (`~/code/proj-x/`)에서 관리합니다. 자세한 흐름은 [[Git_Workflow]] 참조.

@@ -33,7 +33,7 @@
 
 ## 코드와 분리
 
-이 vault는 **노트와 논문 원고만** 담습니다. 각 프로젝트의 실제 코드·실험은 별도 git repo (`~/code/proj-x/`)에서 관리합니다. 공용 서버, 로컬 데스크탑, 노트북 사이의 동기화 규칙은 [`3_Resources/Tools_MCP/Git_Workflow.md`](3_Resources/Tools_MCP/Git_Workflow.md) 참고.
+이 vault는 **노트와 논문 원고만** 담습니다. 각 프로젝트의 실제 코드·실험은 별도 git repo (`~/code/proj-x/`)에서 관리합니다. 공용 서버, 로컬 데스크탑, 노트북 사이의 동기화 규칙은 [`3_Resources/Tools_MCP/Git_Workflow.md`](Git_Workflow.md) 참고.
 
 ## 명명 규칙 (제안)
 

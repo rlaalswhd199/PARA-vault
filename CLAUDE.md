@@ -44,7 +44,7 @@ PARA/
 
 **범위**: 이 vault는 **연구 전용**. 개인 일정·기타 메모는 별도 vault `second_brain/`에서 관리.
 
-**코드는 분리 repo**: 각 프로젝트의 코드·실험은 `~/code/proj-x/` 같은 별도 git repo. vault에는 코드를 두지 않음. 동기화 규칙은 [[3_Resources/Tools_MCP/Git_Workflow]] 참조.
+**코드는 분리 repo**: 각 프로젝트의 코드·실험은 `~/code/proj-x/` 같은 별도 git repo. vault에는 코드를 두지 않음. 동기화 규칙은 [[Git_Workflow]] 참조.
 
 ---
 

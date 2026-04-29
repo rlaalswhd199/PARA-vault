@@ -7,4 +7,4 @@
 | [[Papers/Papers_Index]] | 논문 Reading Notes 인덱스 |
 | [[Seminars/README]] | 외부 세미나·발표 청취 기록 |
 | [[References/README]] | 책·블로그·튜토리얼 등 |
-| [[Tools_MCP/README]] | Claude Skills, MCP 설정 |
+| [[3_Resources/Tools_MCP_Workflow/README]] | Claude Skills, MCP 설정 |
