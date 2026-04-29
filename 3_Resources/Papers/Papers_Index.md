@@ -37,7 +37,7 @@
 - ✅ [[3_Resources/Papers/Paper_ReflexFlow25_ADR]] — arXiv 2512.04904, ADR(Anti-Drift Rectification), CrypticFlow에 직접 구현·실험됨, Should-cite
 
 #### Cryptic Pocket Detection (Baseline / Pre-filter)
-- ✅ [[1_Projects/Project_A/Reading_Notes/Paper_Meller23_PocketMiner]] — Nat. Commun. 2023, GVP-GNN cryptic pocket location 예측 (단일 apo 구조 → residue 확률), ROC-AUC 0.87, >1000× faster than CryptoSite, **CrypticFlow의 conditioning / validation baseline**, Must-cite
+- ✅ [[1_Projects/Crypticflow/Reading_Notes/Paper_Meller23_PocketMiner]] — Nat. Commun. 2023, GVP-GNN cryptic pocket location 예측 (단일 apo 구조 → residue 확률), ROC-AUC 0.87, >1000× faster than CryptoSite, **CrypticFlow의 conditioning / validation baseline**, Must-cite
 
 ### Project B 관련
 
@@ -71,7 +71,7 @@
 - ✅ [[3_Resources/Papers/Paper_ReflexFlow25_ADR]] — Exposure bias 해결 (ADR + FC)
 
 ### Cryptic Pocket Detection / Druggability
-- ✅ [[1_Projects/Project_A/Reading_Notes/Paper_Meller23_PocketMiner]] — GVP-GNN 단일 구조 cryptic pocket 예측, Nat. Commun. 2023
+- ✅ [[1_Projects/Crypticflow/Reading_Notes/Paper_Meller23_PocketMiner]] — GVP-GNN 단일 구조 cryptic pocket 예측, Nat. Commun. 2023
 
 ---
 
