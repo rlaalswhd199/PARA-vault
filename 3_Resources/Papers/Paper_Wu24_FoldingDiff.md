@@ -6,7 +6,7 @@
 - **Venue / Year**: Nature Communications, 2024
 - **Link**: https://www.nature.com/articles/s41467-024-45051-2 | PMC: https://pmc.ncbi.nlm.nih.gov/articles/PMC10844308/
 - **Tier**: ⭐ Must-cite
-- **관련 프로젝트**: [[../../1_Projects/Project_A/README]]
+- **관련 프로젝트**: [[1_Projects/Crypticflow/README]]
 
 ## TL;DR (3줄)
 
@@ -54,5 +54,5 @@
 
 ## 추가로 읽을 참고문헌
 
-- [ ] [[Paper_Yim23_FrameDiff]] — Lever arm effect 없는 SE(3) 접근법
-- [ ] [[Paper_Bose23_FoldFlow]] — SE(3) flow matching
+- [ ] [[3_Resources/Papers/Paper_Yim23_FrameDiff]] — Lever arm effect 없는 SE(3) 접근법
+- [ ] [[3_Resources/Papers/Paper_Bose23_FoldFlow]] — SE(3) flow matching

@@ -7,7 +7,7 @@
 - **Link**: https://arxiv.org/abs/2310.02391
 - **GitHub**: https://github.com/DreamFold/FoldFlow
 - **Tier**: ⭐ Must-cite
-- **관련 프로젝트**: [[../../1_Projects/Project_A/README]]
+- **관련 프로젝트**: [[1_Projects/Crypticflow/README]]
 
 ## TL;DR (3줄)
 
@@ -62,5 +62,5 @@
 
 ## 추가로 읽을 참고문헌
 
-- [ ] [[Paper_Yim23_FrameDiff]] — SE(3) diffusion (FoldFlow의 비교 대상)
-- [ ] [[Paper_Sesame25_ApoHolo]] — SE(3) flow matching for apo→holo
+- [ ] [[3_Resources/Papers/Paper_Yim23_FrameDiff]] — SE(3) diffusion (FoldFlow의 비교 대상)
+- [ ] [[3_Resources/Papers/Paper_Sesame25_ApoHolo]] — SE(3) flow matching for apo→holo

@@ -6,7 +6,7 @@
 - **Venue / Year**: GEM Workshop @ ICLR 2025 / arXiv 2025-09
 - **Link**: https://arxiv.org/abs/2509.05302
 - **Tier**: ⭐ Must-cite
-- **관련 프로젝트**: [[../../1_Projects/Project_A/README]]
+- **관련 프로젝트**: [[1_Projects/Crypticflow/README]]
 
 ## TL;DR (3줄)
 
@@ -53,5 +53,5 @@ Molecular docking은 ligand-bound (holo) 구조가 필요하지만, 실험적으
 
 ## 추가로 읽을 참고문헌
 
-- [ ] [[Paper_Bose23_FoldFlow]] — 동일한 SE(3) flow matching 방법론
-- [ ] [[Paper_Yim23_FrameDiff]] — SE(3) diffusion
+- [ ] [[3_Resources/Papers/Paper_Bose23_FoldFlow]] — 동일한 SE(3) flow matching 방법론
+- [ ] [[3_Resources/Papers/Paper_Yim23_FrameDiff]] — SE(3) diffusion

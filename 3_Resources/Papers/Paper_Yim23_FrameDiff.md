@@ -7,7 +7,7 @@
 - **Link**: https://arxiv.org/abs/2302.02277
 - **GitHub**: https://github.com/jasonkyuyim/se3_diffusion
 - **Tier**: ⭐ Must-cite
-- **관련 프로젝트**: [[../../1_Projects/Project_A/README]]
+- **관련 프로젝트**: [[1_Projects/Crypticflow/README]]
 
 ## TL;DR (3줄)
 
@@ -56,5 +56,5 @@ SE(3) 공간에서 score matching을 수행하는 원칙적인 방법론이 부�
 
 ## 추가로 읽을 참고문헌
 
-- [ ] [[Paper_Bose23_FoldFlow]] — SE(3) flow matching (diffusion 대신 flow)
-- [ ] [[Paper_Jumper21_AlphaFold2]] — FAPE loss 원조
+- [ ] [[3_Resources/Papers/Paper_Bose23_FoldFlow]] — SE(3) flow matching (diffusion 대신 flow)
+- [ ] [[3_Resources/Papers/Paper_Jumper21_AlphaFold2]] — FAPE loss 원조

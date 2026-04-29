@@ -6,7 +6,7 @@
 - **Venue / Year**: Journal of Chemical Theory and Computation (JCTC), 2022
 - **Link**: https://arxiv.org/abs/2205.04676 | https://pubs.acs.org/doi/10.1021/acs.jctc.2c01270 | PMC: https://pmc.ncbi.nlm.nih.gov/articles/PMC10404647/
 - **Tier**: Should-cite
-- **관련 프로젝트**: [[../../1_Projects/Project_A/README]]
+- **관련 프로젝트**: [[1_Projects/Crypticflow/README]]
 
 ## TL;DR (3줄)
 
@@ -53,4 +53,4 @@ Internal coordinate(torsion angle) → Cartesian coordinate 변환(NERF)에서 �
 ## 추가로 읽을 참고문헌
 
 - [ ] MP-NeRF (PubMed 2022) — NERF 병렬화 및 수치 안정성 분석
-- [ ] [[Paper_Wu24_FoldingDiff]] — Lever arm effect 명시
+- [ ] [[3_Resources/Papers/Paper_Wu24_FoldingDiff]] — Lever arm effect 명시

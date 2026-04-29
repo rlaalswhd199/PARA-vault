@@ -6,7 +6,7 @@
 
 | 프로젝트 | 상태 | 데드라인 | 비고 |
 |---------|------|---------|------|
-| [[Project_A/README]] | (작성) | (YYYY-MM-DD) | (한 줄 요약) |
+| [[1_Projects/Crypticflow/README]] | (작성) | (YYYY-MM-DD) | (한 줄 요약) |
 | [[Project_B/README]] | (작성) | (YYYY-MM-DD) | (한 줄 요약) |
 | [[Project_C/README]] | (작성) | (YYYY-MM-DD) | (한 줄 요약) |
 | [[Project_D/README]] | (작성) | (YYYY-MM-DD) | (한 줄 요약) |

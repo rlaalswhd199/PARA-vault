@@ -87,4 +87,4 @@ flowchart TB
 ## 추가로 읽을 참고문헌
 
 - [ ] OpenFold — FAPE sample-level clamping 개선
-- [ ] [[Paper_Yim23_FrameDiff]] — FAPE를 생성 모델에 적용
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Yim23_FrameDiff]] — FAPE를 생성 모델에 적용

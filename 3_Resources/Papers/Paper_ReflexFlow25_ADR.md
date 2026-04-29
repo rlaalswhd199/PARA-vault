@@ -6,7 +6,7 @@
 - **Venue / Year**: arXiv 2025 (arXiv:2512.04904)
 - **Link**: https://arxiv.org/abs/2512.04904
 - **Tier**: Should-cite
-- **관련 프로젝트**: [[../../1_Projects/Project_A/README]]
+- **관련 프로젝트**: [[1_Projects/Crypticflow/README]]
 
 ## TL;DR (3줄)
 

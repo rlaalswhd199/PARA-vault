@@ -6,7 +6,7 @@
 - **Venue / Year**: arXiv 2024 (arXiv:2402.04845)
 - **Link**: https://arxiv.org/abs/2402.04845
 - **Tier**: Should-cite
-- **관련 프로젝트**: [[../../1_Projects/Project_A/README]]
+- **관련 프로젝트**: [[1_Projects/Crypticflow/README]]
 
 ## TL;DR (3줄)
 
@@ -55,5 +55,5 @@
 
 ## 추가로 읽을 참고문헌
 
-- [ ] [[Paper_Sesame25_ApoHolo]] — Apo→holo 직접 예측 (더 관련성 높음)
-- [ ] [[Paper_Jumper21_AlphaFold2]] — FAPE loss 원조
+- [ ] [[3_Resources/Papers/Paper_Sesame25_ApoHolo]] — Apo→holo 직접 예측 (더 관련성 높음)
+- [ ] [[3_Resources/Papers/Paper_Jumper21_AlphaFold2]] — FAPE loss 원조

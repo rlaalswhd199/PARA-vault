@@ -82,5 +82,5 @@ flowchart TB
 
 ## 추가로 읽을 참고문헌
 
-- [ ] [[Paper_Sesame25_ApoHolo]] — 동일 SE(3) 방식으로 apo→holo task
-- [ ] [[Paper_Yim23_FrameDiff]] — SE(3) diffusion (FoldFlow의 비교 대상)
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Sesame25_ApoHolo]] — 동일 SE(3) 방식으로 apo→holo task
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Yim23_FrameDiff]] — SE(3) diffusion (FoldFlow의 비교 대상)

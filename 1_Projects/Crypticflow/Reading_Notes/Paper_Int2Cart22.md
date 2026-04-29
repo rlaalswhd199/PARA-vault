@@ -80,4 +80,4 @@ flowchart LR
 ## 추가로 읽을 참고문헌
 
 - [ ] MP-NeRF (PubMed 2022) — NERF 병렬화
-- [ ] [[Paper_Wu24_FoldingDiff]] — lever arm effect 명시
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Wu24_FoldingDiff]] — lever arm effect 명시

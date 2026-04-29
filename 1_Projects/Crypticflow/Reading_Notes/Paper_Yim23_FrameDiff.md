@@ -88,5 +88,5 @@ flowchart TB
 
 ## 추가로 읽을 참고문헌
 
-- [ ] [[Paper_Bose23_FoldFlow]] — SE(3) flow matching 버전
-- [ ] [[Paper_Jumper21_AlphaFold2]] — IPA, FAPE loss 원조
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Bose23_FoldFlow]] — SE(3) flow matching 버전
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Jumper21_AlphaFold2]] — IPA, FAPE loss 원조

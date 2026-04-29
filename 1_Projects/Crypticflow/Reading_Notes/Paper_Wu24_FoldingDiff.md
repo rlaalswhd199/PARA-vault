@@ -81,5 +81,5 @@ flowchart TB
 
 ## 추가로 읽을 참고문헌
 
-- [ ] [[Paper_Yim23_FrameDiff]] — lever arm effect 없는 SE(3) 접근
-- [ ] [[Paper_Int2Cart22]] — NERF 오차 누적 정량 분석
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Yim23_FrameDiff]] — lever arm effect 없는 SE(3) 접근
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Int2Cart22]] — NERF 오차 누적 정량 분석

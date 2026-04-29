@@ -6,7 +6,7 @@
 - **Venue / Year**: Nature, 2021
 - **Link**: https://www.nature.com/articles/s41586-021-03819-2
 - **Tier**: ⭐ Must-cite
-- **관련 프로젝트**: [[../../1_Projects/Project_A/README]]
+- **관련 프로젝트**: [[1_Projects/Crypticflow/README]]
 
 ## TL;DR (3줄)
 
@@ -63,4 +63,4 @@ L_FAPE = (1/N_frames · 1/N_atoms) Σᵢ Σⱼ min(dist(i,j), d_clamp)
 ## 추가로 읽을 참고문헌
 
 - [ ] OpenFold — FAPE clamping 개선 (sample 단위 clamping)
-- [ ] [[Paper_Wu24_FoldingDiff]] — torsion angle 기반 대안
+- [ ] [[3_Resources/Papers/Paper_Wu24_FoldingDiff]] — torsion angle 기반 대안

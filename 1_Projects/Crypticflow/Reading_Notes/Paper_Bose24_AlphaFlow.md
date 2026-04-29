@@ -80,5 +80,5 @@ flowchart TB
 
 ## 추가로 읽을 참고문헌
 
-- [ ] [[Paper_Sesame25_ApoHolo]] — apo→holo 직접 예측 (더 관련성 높음)
-- [ ] [[Paper_Jumper21_AlphaFold2]] — FAPE 원조
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Sesame25_ApoHolo]] — apo→holo 직접 예측 (더 관련성 높음)
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Jumper21_AlphaFold2]] — FAPE 원조

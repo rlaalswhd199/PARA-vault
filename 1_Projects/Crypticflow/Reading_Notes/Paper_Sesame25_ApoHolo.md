@@ -88,5 +88,5 @@ flowchart TB
 
 ## 추가로 읽을 참고문헌
 
-- [ ] [[Paper_Bose23_FoldFlow]] — 동일 SE(3) flow matching 방법론
-- [ ] [[Paper_Jumper21_AlphaFold2]] — FAPE loss
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Bose23_FoldFlow]] — 동일 SE(3) flow matching 방법론
+- [ ] [[1_Projects/Crypticflow/Reading_Notes/Paper_Jumper21_AlphaFold2]] — FAPE loss
