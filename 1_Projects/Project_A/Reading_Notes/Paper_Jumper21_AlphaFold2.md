@@ -16,7 +16,7 @@
 
 ## 핵심 아키텍처
 
-![[Paper_Jumper21_AlphaFold2_arch.png]]
+![[3_Resources/Papers/Paper_Jumper21_AlphaFold2_arch.png]]
 
 <details>
 <summary>📐 Mermaid source — 수정 후 <code>scripts/render_mermaids.sh</code> 재실행</summary>

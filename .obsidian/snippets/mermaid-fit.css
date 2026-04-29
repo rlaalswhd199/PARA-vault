@@ -1,30 +1,19 @@
 /* ============================================================
- * Mermaid 한눈 보기 + 호버 줌
+ * Mermaid 한눈 보기
  *
  * 동작:
- *   1. 기본: 노트 폭에 맞춰 축소 (한눈에 들어오도록)
- *   2. 호버: 1.7배 확대 + 위에 떠서 주변 텍스트 안 침범
- *   3. 마우스 떼면 원래 크기로
- *
- * 더 큰 확대가 필요하면 --mermaid-zoom 값을 바꾸세요.
- * (예: 2.0, 2.5)
+ *   1. 노트 폭에 맞춰 축소 (한눈에 들어오도록)
  * ============================================================ */
 
-:root {
-    --mermaid-zoom: 1.7;          /* 호버 시 확대 배율 */
-    --mermaid-max-h: 70vh;        /* 기본 최대 높이 */
-}
-
-/* ---- 1. 기본: 노트 폭에 맞춰 축소 ---- */
+/* ---- 기본: 노트 폭에 맞춰 축소 ---- */
 .markdown-preview-view .mermaid,
 .markdown-rendered .mermaid,
 .cm-preview-code-block .mermaid {
     text-align: center;
     border-radius: 6px;
-    overflow: visible;            /* 호버 줌이 잘리지 않도록 */
+    overflow: visible;
     position: relative;
     z-index: 1;
-    cursor: zoom-in;
     margin: 1em 0;
 }
 
@@ -32,35 +21,9 @@
 .markdown-rendered .mermaid svg,
 .cm-preview-code-block .mermaid svg {
     max-width: 100% !important;
-    max-height: var(--mermaid-max-h);
+    max-height: 70vh;
     height: auto !important;
     width: auto !important;
     display: block;
     margin: 0 auto;
-    transform-origin: center center;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* ---- 2. 호버: 1.7배 확대 + 그림자로 떠 보이게 ---- */
-.markdown-preview-view .mermaid:hover,
-.markdown-rendered .mermaid:hover {
-    z-index: 999;                 /* 다른 요소 위로 */
-    cursor: zoom-out;
-}
-
-.markdown-preview-view .mermaid:hover svg,
-.markdown-rendered .mermaid:hover svg {
-    transform: scale(var(--mermaid-zoom));
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    background: var(--background-primary);
-    border-radius: 8px;
-    max-height: none !important;  /* 호버 중엔 높이 제한 해제 */
-    max-width: none !important;   /* 폭 제한도 해제 → 진짜 1.7배 */
-}
-
-/* ---- 3. 사이드 효과 — 호버 시 다이어그램이 옆으로 나가도 잘리지 않게 ---- */
-.markdown-source-view.mod-cm6 .cm-content,
-.markdown-preview-view,
-.markdown-rendered {
-    overflow-x: visible;
 }

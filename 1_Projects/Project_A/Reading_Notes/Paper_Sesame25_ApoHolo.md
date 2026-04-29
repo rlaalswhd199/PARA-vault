@@ -16,7 +16,7 @@
 
 ## 핵심 아키텍처
 
-![[Paper_Sesame25_ApoHolo_arch.png]]
+![[3_Resources/Papers/Paper_Sesame25_ApoHolo_arch.png]]
 
 <details>
 <summary>📐 Mermaid source — 수정 후 <code>scripts/render_mermaids.sh</code> 재실행</summary>

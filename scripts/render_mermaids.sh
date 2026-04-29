@@ -2,12 +2,11 @@
 # render_mermaids.sh — vault 내 모든 .md의 mermaid 블록을 PNG로 렌더.
 #
 # 사용:
-#   1. (한 번만) brew install mermaid-cli
-#   2. bash scripts/render_mermaids.sh
+#   bash scripts/render_mermaids.sh
 #
 # 동작:
 #   - vault 내 .md 파일을 스캔, mermaid 블록 추출
-#   - 노트와 같은 디렉토리에 <노트이름>_arch.png 로 렌더
+#   - PNG는 3_Resources/Papers/<노트이름>_arch.png 에 저장
 #   - .md가 PNG보다 새것이면 재렌더, 아니면 skip (mtime 비교)
 #   - _Templates/는 제외
 #
@@ -22,6 +21,7 @@ cd "$VAULT_ROOT"
 
 FORCE=0
 WIDTH=2000
+PNG_DIR="$VAULT_ROOT/3_Resources/Papers"
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -31,19 +31,27 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-# mermaid-cli 확인
-if ! command -v mmdc >/dev/null 2>&1; then
+# mermaid-cli 확인 (로컬 설치 우선)
+MMDC="$VAULT_ROOT/.npm-local/node_modules/.bin/mmdc"
+if [[ ! -x "$MMDC" ]]; then
+    MMDC="$(command -v mmdc 2>/dev/null || true)"
+fi
+if [[ -z "$MMDC" ]]; then
     echo "❌ mermaid-cli (mmdc) 가 설치되어 있지 않습니다." >&2
-    echo "   설치: brew install mermaid-cli" >&2
-    echo "   또는: npm install -g @mermaid-js/mermaid-cli" >&2
+    echo "   설치: cd $VAULT_ROOT && npm install --prefix .npm-local @mermaid-js/mermaid-cli" >&2
     exit 1
 fi
 
+# puppeteer --no-sandbox 설정 (Linux sandbox 제한 우회)
+PUPPETEER_CFG="$(mktemp -t puppeteer.XXXXXX.json)"
+echo '{"args":["--no-sandbox"]}' > "$PUPPETEER_CFG"
+trap 'rm -f "$PUPPETEER_CFG"' EXIT
+
 # mermaid 블록이 있는 .md 찾기 (_Templates/ 제외)
 MD_FILES=()
-while IFS= read -r -d '' file; do
+while IFS= read -r file; do
     MD_FILES+=("$file")
-done < <(grep -lrz '```mermaid' --include='*.md' . | grep -v '/_Templates/')
+done < <(grep -rl '```mermaid' --include='*.md' . | grep -v '/_Templates/' | grep -v '/\.npm-local/' | sort)
 
 if [[ ${#MD_FILES[@]} -eq 0 ]]; then
     echo "mermaid 블록을 가진 .md 파일이 없습니다."
@@ -56,8 +64,7 @@ failed=0
 
 for md in "${MD_FILES[@]}"; do
     base="$(basename "$md" .md)"
-    dir="$(dirname "$md")"
-    png="$dir/${base}_arch.png"
+    png="$PNG_DIR/${base}_arch.png"
 
     # 최신이면 skip (--force 가 아닐 때)
     if [[ $FORCE -eq 0 && -f "$png" && "$png" -nt "$md" ]]; then
@@ -76,8 +83,8 @@ for md in "${MD_FILES[@]}"; do
         continue
     fi
 
-    echo "🎨 render: $md"
-    if mmdc -i "$tmp" -o "$png" -t default -b transparent --width "$WIDTH" 2>&1 | tail -3; then
+    echo "🎨 render: $md → $png"
+    if "$MMDC" -i "$tmp" -o "$png" -t default -b transparent --width "$WIDTH" -p "$PUPPETEER_CFG" 2>&1 | grep -v '^$'; then
         rendered=$((rendered + 1))
     else
         echo "❌ failed: $md" >&2

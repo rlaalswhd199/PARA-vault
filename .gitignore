@@ -69,3 +69,9 @@ venv/
 *.npy
 *.npz
 wandb/
+
+# 로컬 도구 (node_modules 등)
+.npm-local/
+
+# OMC 상태 파일
+.omc/
