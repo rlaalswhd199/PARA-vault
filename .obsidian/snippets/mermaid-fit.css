@@ -1,33 +1,72 @@
 /* ============================================================
- * Mermaid 한눈에 들어오게 — 노트 폭에 맞춰 축소, 너무 큰 다이어그램은
- * 가로 스크롤 허용. 클릭 줌이 필요하면 Image Toolkit 류 플러그인을 함께.
+ * Mermaid 한눈 보기 + 클릭/호버 줌
  *
- * 사용: Settings → Appearance → CSS snippets에서 mermaid-fit 토글 ON
+ * 동작:
+ *   1. 기본: 노트 폭에 맞춰 축소 (한눈에 들어오도록)
+ *   2. 호버: 살짝 강조 (어디 클릭하면 되는지 힌트)
+ *   3. 클릭: 1.6배로 확대 + 가로/세로 스크롤 가능
+ *      → 다시 클릭하면 원래 크기로 (Obsidian 자체 동작 활용)
+ *
+ * 사용: Settings → Appearance → CSS snippets에서 mermaid-fit ON
  * ============================================================ */
 
+/* ---- 1. 기본: 노트 폭에 맞춰 축소 ---- */
 .markdown-preview-view .mermaid svg,
 .markdown-rendered .mermaid svg,
 .cm-preview-code-block .mermaid svg {
     max-width: 100% !important;
-    max-height: 70vh;          /* 화면 높이의 70%까지만 차지 */
+    max-height: 70vh;
     height: auto !important;
     width: auto !important;
     display: block;
     margin: 0 auto;
+    transition: transform 0.25s ease, max-width 0.25s ease, max-height 0.25s ease;
+    cursor: zoom-in;
 }
 
-/* 너무 가로로 길 때만 가로 스크롤 (잘려 보이지 않게) */
 .markdown-preview-view .mermaid,
 .markdown-rendered .mermaid,
 .cm-preview-code-block .mermaid {
-    overflow-x: auto;
-    overflow-y: visible;
+    overflow: auto;
     text-align: center;
+    border-radius: 6px;
 }
 
-/* 다이어그램 호버 시 살짝 강조 — 어디가 클릭 영역인지 힌트 */
+/* ---- 2. 호버: 어디가 클릭 가능한지 힌트 ---- */
 .markdown-preview-view .mermaid:hover,
 .markdown-rendered .mermaid:hover {
     outline: 1px dashed var(--background-modifier-border-hover);
     outline-offset: 4px;
 }
+
+/* ---- 3. 클릭으로 확대 (focus-within 트릭) ---- */
+/* SVG 안의 노드를 클릭하면 SVG가 focus를 갖게 되어 .mermaid 컨테이너가
+   :focus-within 상태가 됩니다. 이때 확대 모드로 전환. */
+.markdown-preview-view .mermaid:focus-within,
+.markdown-rendered .mermaid:focus-within {
+    max-height: none !important;
+    overflow: auto;
+    background: var(--background-secondary);
+    padding: 12px;
+}
+
+.markdown-preview-view .mermaid:focus-within svg,
+.markdown-rendered .mermaid:focus-within svg {
+    transform: scale(1.6);
+    transform-origin: top left;
+    cursor: zoom-out;
+    max-width: none !important;
+    max-height: none !important;
+}
+
+/* ---- 4. 호버 줌 (대안) ---- *
+ * focus-within 방식이 잘 안 되면 위 .mermaid:focus-within 블록 두 개를 주석 처리하고
+ * 아래를 활성화. 마우스 올리면 자동 확대.
+ *
+ * .markdown-rendered .mermaid:hover svg {
+ *     transform: scale(1.5);
+ *     transform-origin: top left;
+ *     z-index: 999;
+ *     position: relative;
+ * }
+ */
