@@ -40,7 +40,10 @@ if ! command -v mmdc >/dev/null 2>&1; then
 fi
 
 # mermaid 블록이 있는 .md 찾기 (_Templates/ 제외)
-mapfile -t MD_FILES < <(grep -lr '```mermaid' --include='*.md' . | grep -v '/_Templates/' || true)
+MD_FILES=()
+while IFS= read -r -d '' file; do
+    MD_FILES+=("$file")
+done < <(grep -lrz '```mermaid' --include='*.md' . | grep -v '/_Templates/')
 
 if [[ ${#MD_FILES[@]} -eq 0 ]]; then
     echo "mermaid 블록을 가진 .md 파일이 없습니다."
