@@ -1,72 +1,66 @@
 /* ============================================================
- * Mermaid 한눈 보기 + 클릭/호버 줌
+ * Mermaid 한눈 보기 + 호버 줌
  *
  * 동작:
  *   1. 기본: 노트 폭에 맞춰 축소 (한눈에 들어오도록)
- *   2. 호버: 살짝 강조 (어디 클릭하면 되는지 힌트)
- *   3. 클릭: 1.6배로 확대 + 가로/세로 스크롤 가능
- *      → 다시 클릭하면 원래 크기로 (Obsidian 자체 동작 활용)
+ *   2. 호버: 1.7배 확대 + 위에 떠서 주변 텍스트 안 침범
+ *   3. 마우스 떼면 원래 크기로
  *
- * 사용: Settings → Appearance → CSS snippets에서 mermaid-fit ON
+ * 더 큰 확대가 필요하면 --mermaid-zoom 값을 바꾸세요.
+ * (예: 2.0, 2.5)
  * ============================================================ */
 
+:root {
+    --mermaid-zoom: 1.7;          /* 호버 시 확대 배율 */
+    --mermaid-max-h: 70vh;        /* 기본 최대 높이 */
+}
+
 /* ---- 1. 기본: 노트 폭에 맞춰 축소 ---- */
+.markdown-preview-view .mermaid,
+.markdown-rendered .mermaid,
+.cm-preview-code-block .mermaid {
+    text-align: center;
+    border-radius: 6px;
+    overflow: visible;            /* 호버 줌이 잘리지 않도록 */
+    position: relative;
+    z-index: 1;
+    cursor: zoom-in;
+    margin: 1em 0;
+}
+
 .markdown-preview-view .mermaid svg,
 .markdown-rendered .mermaid svg,
 .cm-preview-code-block .mermaid svg {
     max-width: 100% !important;
-    max-height: 70vh;
+    max-height: var(--mermaid-max-h);
     height: auto !important;
     width: auto !important;
     display: block;
     margin: 0 auto;
-    transition: transform 0.25s ease, max-width 0.25s ease, max-height 0.25s ease;
-    cursor: zoom-in;
+    transform-origin: center center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.markdown-preview-view .mermaid,
-.markdown-rendered .mermaid,
-.cm-preview-code-block .mermaid {
-    overflow: auto;
-    text-align: center;
-    border-radius: 6px;
-}
-
-/* ---- 2. 호버: 어디가 클릭 가능한지 힌트 ---- */
+/* ---- 2. 호버: 1.7배 확대 + 그림자로 떠 보이게 ---- */
 .markdown-preview-view .mermaid:hover,
 .markdown-rendered .mermaid:hover {
-    outline: 1px dashed var(--background-modifier-border-hover);
-    outline-offset: 4px;
-}
-
-/* ---- 3. 클릭으로 확대 (focus-within 트릭) ---- */
-/* SVG 안의 노드를 클릭하면 SVG가 focus를 갖게 되어 .mermaid 컨테이너가
-   :focus-within 상태가 됩니다. 이때 확대 모드로 전환. */
-.markdown-preview-view .mermaid:focus-within,
-.markdown-rendered .mermaid:focus-within {
-    max-height: none !important;
-    overflow: auto;
-    background: var(--background-secondary);
-    padding: 12px;
-}
-
-.markdown-preview-view .mermaid:focus-within svg,
-.markdown-rendered .mermaid:focus-within svg {
-    transform: scale(1.6);
-    transform-origin: top left;
+    z-index: 999;                 /* 다른 요소 위로 */
     cursor: zoom-out;
-    max-width: none !important;
-    max-height: none !important;
 }
 
-/* ---- 4. 호버 줌 (대안) ---- *
- * focus-within 방식이 잘 안 되면 위 .mermaid:focus-within 블록 두 개를 주석 처리하고
- * 아래를 활성화. 마우스 올리면 자동 확대.
- *
- * .markdown-rendered .mermaid:hover svg {
- *     transform: scale(1.5);
- *     transform-origin: top left;
- *     z-index: 999;
- *     position: relative;
- * }
- */
+.markdown-preview-view .mermaid:hover svg,
+.markdown-rendered .mermaid:hover svg {
+    transform: scale(var(--mermaid-zoom));
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    background: var(--background-primary);
+    border-radius: 8px;
+    max-height: none !important;  /* 호버 중엔 높이 제한 해제 */
+    max-width: none !important;   /* 폭 제한도 해제 → 진짜 1.7배 */
+}
+
+/* ---- 3. 사이드 효과 — 호버 시 다이어그램이 옆으로 나가도 잘리지 않게 ---- */
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-preview-view,
+.markdown-rendered {
+    overflow-x: visible;
+}
