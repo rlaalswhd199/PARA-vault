@@ -16,6 +16,11 @@
 
 ## 핵심 아키텍처
 
+![[Paper_Int2Cart22_arch.png]]
+
+<details>
+<summary>📐 Mermaid source — 수정 후 <code>scripts/render_mermaids.sh</code> 재실행</summary>
+
 ```mermaid
 %%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
 flowchart LR
@@ -53,6 +58,8 @@ flowchart LR
     BOND_PRED & ANGLE_PRED & TOR --> NERF_CHAIN
     NERF_CHAIN --> OUTPUT2
 ```
+
+</details>
 
 ## 핵심 아이디어
 

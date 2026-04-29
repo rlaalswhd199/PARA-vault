@@ -17,6 +17,11 @@
 
 ## 핵심 아키텍처
 
+![[Paper_Bose23_FoldFlow_arch.png]]
+
+<details>
+<summary>📐 Mermaid source — 수정 후 <code>scripts/render_mermaids.sh</code> 재실행</summary>
+
 ```mermaid
 %%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
 flowchart TB
@@ -55,6 +60,8 @@ flowchart TB
     OT_BOX -.->|"pair 최적화"| FLOW
     MODEL -->|"ODE solver"| X1F
 ```
+
+</details>
 
 ## 핵심 아이디어
 

@@ -22,6 +22,11 @@
 
 ### Mermaid (빠른 스케치)
 
+![[Paper_Reading_Template_arch.png]]
+
+<details>
+<summary>📐 Mermaid source — 수정 후 <code>scripts/render_mermaids.sh</code> 재실행</summary>
+
 ```mermaid
 %%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
 flowchart TB
@@ -52,6 +57,8 @@ flowchart TB
     E --> OUTPUT
     OUTPUT --> LOSS
 ```
+
+</details>
 
 ### Excalidraw (인터랙티브, 선택)
 
