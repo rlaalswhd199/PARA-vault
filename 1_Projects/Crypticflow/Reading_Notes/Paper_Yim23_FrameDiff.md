@@ -17,43 +17,38 @@
 
 ## 핵심 아키텍처
 
-![[3_Resources/Papers/Paper_Yim23_FrameDiff_arch.png]]
-
-<details>
-<summary>Mermaid source</summary>
-
 ```mermaid
-%%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
+%%{init: {'theme':'dark', 'flowchart': {'htmlLabels': true, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px', 'primaryColor': '#2d4a6e', 'primaryTextColor': '#e8eaf0', 'primaryBorderColor': '#5a8abf', 'lineColor': '#7ab3e0', 'secondaryColor': '#1e3a5a', 'tertiaryColor': '#162840', 'clusterBkg': '#1a2f45', 'clusterBorder': '#4a7aaa', 'titleColor': '#c8d8f0', 'edgeLabelBackground': '#1a2f45', 'nodeTextColor': '#e8eaf0'}}}%%
 flowchart TB
     subgraph INPUT["입력"]
         SEQ["서열 (L residues)"]
-        NOISE["Random SE(3) Frames\n(Rᵢ, tᵢ) × L"]
+        NOISE["Random SE(3) Frames<br/>(Rᵢ, tᵢ) × L"]
     end
 
     subgraph REPR["SE(3) Frame 표현"]
-        FRAME["각 residue i →\n(Rᵢ ∈ SO(3), tᵢ ∈ ℝ³)\nN, Cα, C로 frame 정의"]
+        FRAME["각 residue i →<br/>(Rᵢ ∈ SO(3), tᵢ ∈ ℝ³)<br/>N, Cα, C로 frame 정의"]
     end
 
     subgraph DIFFUSION["SE(3) Score Matching"]
         direction TB
-        ROT["SO(3) Diffusion\nIGSO3 (Isotropic Gaussian)"]
-        TRANS["ℝ³ Diffusion\nGaussian"]
-        SCORE_R["Rotation Score\n∇_{Rᵢ} log p(Rₜ)"]
-        SCORE_T["Translation Score\n∇_{tᵢ} log p(tₜ)"]
+        ROT["SO(3) Diffusion<br/>IGSO3 (Isotropic Gaussian)"]
+        TRANS["ℝ³ Diffusion<br/>Gaussian"]
+        SCORE_R["Rotation Score<br/>∇_{Rᵢ} log p(Rₜ)"]
+        SCORE_T["Translation Score<br/>∇_{tᵢ} log p(tₜ)"]
         ROT --> SCORE_R
         TRANS --> SCORE_T
     end
 
     subgraph MODEL["IPA Transformer"]
-        IPA["Invariant Point\nAttention (IPA)\n(AlphaFold2 구조 모듈)"]
-        PAIR["Pair Representation\n(L×L)"]
-        SINGLE["Single Representation\n(L)"]
+        IPA["Invariant Point<br/>Attention (IPA)<br/>(AlphaFold2 구조 모듈)"]
+        PAIR["Pair Representation<br/>(L×L)"]
+        SINGLE["Single Representation<br/>(L)"]
         IPA --> PAIR & SINGLE
     end
 
     subgraph LOSS["FAPE Loss"]
-        LOCAL["Local Frame 기준\n상대 좌표 비교\ndist(i,j) = ‖Tᵢ⁻¹(xⱼ_pred) - Tᵢ⁻¹(xⱼ_true)‖"]
-        CLAMP["d_clamp 적용\n(gradient 안정화)"]
+        LOCAL["Local Frame 기준<br/>상대 좌표 비교<br/>dist(i,j) = ‖Tᵢ⁻¹(xⱼ_pred) - Tᵢ⁻¹(xⱼ_true)‖"]
+        CLAMP["d_clamp 적용<br/>(gradient 안정화)"]
         LOCAL --> CLAMP
     end
 
@@ -63,10 +58,9 @@ flowchart TB
     MODEL --> SCORE_R & SCORE_T
     MODEL --> LOSS
 
-    note1["⭐ Sequential NERF 없음\n→ Lever arm effect 차단"]
+    note1["⭐ Sequential NERF 없음<br/>→ Lever arm effect 차단"]
 ```
 
-</details>
 
 ## 핵심 아이디어
 

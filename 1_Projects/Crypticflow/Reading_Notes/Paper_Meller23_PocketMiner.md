@@ -22,33 +22,28 @@
 
 ### Mermaid (빠른 스케치)
 
-![[Paper_Meller23_PocketMiner_arch.png]]
-
-<details>
-<summary>📐 Mermaid source — 수정 후 <code>scripts/render_mermaids.sh</code> 재실행</summary>
-
 ```mermaid
-%%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
+%%{init: {'theme':'dark', 'flowchart': {'htmlLabels': true, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px', 'primaryColor': '#2d4a6e', 'primaryTextColor': '#e8eaf0', 'primaryBorderColor': '#5a8abf', 'lineColor': '#7ab3e0', 'secondaryColor': '#1e3a5a', 'tertiaryColor': '#162840', 'clusterBkg': '#1a2f45', 'clusterBorder': '#4a7aaa', 'titleColor': '#c8d8f0', 'edgeLabelBackground': '#1a2f45', 'nodeTextColor': '#e8eaf0'}}}%%
 flowchart TB
     subgraph INPUT["입력"]
-        APO["Apo 단백질 구조\n(PDB or AlphaFold)\n단일 구조"]
+        APO["Apo 단백질 구조<br/>(PDB or AlphaFold)<br/>단일 구조"]
     end
 
     subgraph GRAPH["그래프 구성"]
-        NODE["노드 (residue)\nφ,ψ,ω 의 sin/cos\nCβ-Cα·forward 단위벡터\nAA one-hot"]
-        EDGE["엣지 (30-NN)\nCα-Cα 단위벡터\n거리 RBF\nbackbone seq sin/cos"]
+        NODE["노드 (residue)<br/>φ,ψ,ω 의 sin/cos<br/>Cβ-Cα·forward 단위벡터<br/>AA one-hot"]
+        EDGE["엣지 (30-NN)<br/>Cα-Cα 단위벡터<br/>거리 RBF<br/>backbone seq sin/cos"]
     end
 
     subgraph GVPGNN["GVP-GNN (4 message passing layers)"]
-        GVP["Geometric Vector Perceptron\nnode 8 vec + 50 scalar\nedge 1 vec + 32 scalar\nhidden 16 vec + 100 scalar"]
+        GVP["Geometric Vector Perceptron<br/>node 8 vec + 50 scalar<br/>edge 1 vec + 32 scalar<br/>hidden 16 vec + 100 scalar"]
     end
 
     subgraph TRAIN["학습 라벨 (MD 시뮬레이션 941K examples)"]
-        SIM["40 ns adaptive MD\n→ LIGSITE pocket volume 추적\nΔV ≥ 40 Ų → positive\n+ fpocket druggability transfer"]
+        SIM["40 ns adaptive MD<br/>→ LIGSITE pocket volume 추적<br/>ΔV ≥ 40 Ų → positive<br/>+ fpocket druggability transfer"]
     end
 
     subgraph OUTPUT["출력"]
-        PRED["Residue별 cryptic pocket\n확률 [0, 1]\n<1 sec inference"]
+        PRED["Residue별 cryptic pocket<br/>확률 [0, 1]<br/><1 sec inference"]
     end
 
     APO --> NODE
@@ -59,7 +54,6 @@ flowchart TB
     SIM -.->|"학습 시그널"| GVP
 ```
 
-</details>
 
 ### Excalidraw (인터랙티브, 선택)
 

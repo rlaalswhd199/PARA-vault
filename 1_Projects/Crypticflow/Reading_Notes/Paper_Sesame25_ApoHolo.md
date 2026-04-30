@@ -16,45 +16,40 @@
 
 ## 핵심 아키텍처
 
-![[3_Resources/Papers/Paper_Sesame25_ApoHolo_arch.png]]
-
-<details>
-<summary>Mermaid source</summary>
-
 ```mermaid
-%%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
+%%{init: {'theme':'dark', 'flowchart': {'htmlLabels': true, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px', 'primaryColor': '#2d4a6e', 'primaryTextColor': '#e8eaf0', 'primaryBorderColor': '#5a8abf', 'lineColor': '#7ab3e0', 'secondaryColor': '#1e3a5a', 'tertiaryColor': '#162840', 'clusterBkg': '#1a2f45', 'clusterBorder': '#4a7aaa', 'titleColor': '#c8d8f0', 'edgeLabelBackground': '#1a2f45', 'nodeTextColor': '#e8eaf0'}}}%%
 flowchart TB
     subgraph INPUT["입력"]
-        APO["Apo 구조\n(Rᵢᵃᵖᵒ, tᵢᵃᵖᵒ) × L"]
-        SITE["Binding Site\n정보 (선택적)"]
-        SEQ2["서열 임베딩\n(ESM 등)"]
+        APO["Apo 구조<br/>(Rᵢᵃᵖᵒ, tᵢᵃᵖᵒ) × L"]
+        SITE["Binding Site<br/>정보 (선택적)"]
+        SEQ2["서열 임베딩<br/>(ESM 등)"]
     end
 
     subgraph FLOW["SE(3) Flow Matching (apo→holo)"]
         direction LR
-        X0S["x₀ = apo frames\n(Rᵢᵃᵖᵒ, tᵢᵃᵖᵒ)"]
-        X1S["x₁ = holo frames\n(Rᵢʰᵒˡᵒ, tᵢʰᵒˡᵒ)"]
-        XTS["xₜ = geodesic(x₀, x₁, t)\nSO(3): SLERP\nℝ³: linear"]
+        X0S["x₀ = apo frames<br/>(Rᵢᵃᵖᵒ, tᵢᵃᵖᵒ)"]
+        X1S["x₁ = holo frames<br/>(Rᵢʰᵒˡᵒ, tᵢʰᵒˡᵒ)"]
+        XTS["xₜ = geodesic(x₀, x₁, t)<br/>SO(3): SLERP<br/>ℝ³: linear"]
         X0S -->|"t=0"| XTS
         X1S -->|"t=1"| XTS
     end
 
     subgraph MODEL2["SE(3) Transformer"]
-        COND["Apo 구조 조건\n(conditioning)"]
-        IPA3["IPA Transformer\n(SE(3) equivariant)"]
-        VEL["Velocity\nvθ(xₜ, t | apo)"]
+        COND["Apo 구조 조건<br/>(conditioning)"]
+        IPA3["IPA Transformer<br/>(SE(3) equivariant)"]
+        VEL["Velocity<br/>vθ(xₜ, t | apo)"]
         COND --> IPA3 --> VEL
     end
 
     subgraph LOSS2["복합 Loss"]
-        FAPE2["FAPE Loss\n(local frame 기준 좌표 오차)"]
-        PAIR2["Pairwise Distance Loss\n(Cα-Cα 거리 보존)"]
+        FAPE2["FAPE Loss<br/>(local frame 기준 좌표 오차)"]
+        PAIR2["Pairwise Distance Loss<br/>(Cα-Cα 거리 보존)"]
         TOTAL["L_total = L_FAPE + λ·L_pair"]
         FAPE2 & PAIR2 --> TOTAL
     end
 
     subgraph OUTPUT["출력"]
-        HOLO["Holo 구조 예측\n(Rᵢʰᵒˡᵒ, tᵢʰᵒˡᵒ)"]
+        HOLO["Holo 구조 예측<br/>(Rᵢʰᵒˡᵒ, tᵢʰᵒˡᵒ)"]
     end
 
     APO & SITE & SEQ2 --> MODEL2
@@ -64,7 +59,6 @@ flowchart TB
     VEL -->|"ODE integration"| HOLO
 ```
 
-</details>
 
 ## 핵심 아이디어
 

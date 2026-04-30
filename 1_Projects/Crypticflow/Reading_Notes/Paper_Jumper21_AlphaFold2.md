@@ -16,27 +16,22 @@
 
 ## 핵심 아키텍처
 
-![[3_Resources/Papers/Paper_Jumper21_AlphaFold2_arch.png]]
-
-<details>
-<summary>Mermaid source</summary>
-
 ```mermaid
-%%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
+%%{init: {'theme':'dark', 'flowchart': {'htmlLabels': true, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px', 'primaryColor': '#2d4a6e', 'primaryTextColor': '#e8eaf0', 'primaryBorderColor': '#5a8abf', 'lineColor': '#7ab3e0', 'secondaryColor': '#1e3a5a', 'tertiaryColor': '#162840', 'clusterBkg': '#1a2f45', 'clusterBorder': '#4a7aaa', 'titleColor': '#c8d8f0', 'edgeLabelBackground': '#1a2f45', 'nodeTextColor': '#e8eaf0'}}}%%
 flowchart TB
     subgraph INPUT3["입력"]
-        MSA["MSA\n(Multiple Sequence Alignment)"]
-        TMPL["Templates\n(알려진 구조)"]
+        MSA["MSA<br/>(Multiple Sequence Alignment)"]
+        TMPL["Templates<br/>(알려진 구조)"]
         SEQ3["Target 서열"]
     end
 
     subgraph EVOFORMER["Evoformer (×48 blocks)"]
         direction TB
-        MSA_TRACK["MSA Representation\n(N_seq × L × c_m)"]
-        PAIR_TRACK["Pair Representation\n(L × L × c_z)"]
-        ROW_ATT["Row-wise Gated\nMSA Attention"]
-        COL_ATT["Column-wise Gated\nMSA Attention"]
-        TRI_UPD["Triangular\nMultiplicative Update"]
+        MSA_TRACK["MSA Representation<br/>(N_seq × L × c_m)"]
+        PAIR_TRACK["Pair Representation<br/>(L × L × c_z)"]
+        ROW_ATT["Row-wise Gated<br/>MSA Attention"]
+        COL_ATT["Column-wise Gated<br/>MSA Attention"]
+        TRI_UPD["Triangular<br/>Multiplicative Update"]
         MSA_TRACK <-->|"교차 업데이트"| PAIR_TRACK
         ROW_ATT & COL_ATT --> MSA_TRACK
         TRI_UPD --> PAIR_TRACK
@@ -44,20 +39,20 @@ flowchart TB
 
     subgraph STRUCT_MOD["Structure Module (×8 blocks)"]
         direction TB
-        FRAMES["Residue Frames\n(Rᵢ, tᵢ) × L\n독립적으로 예측"]
-        IPA4["IPA\n(Invariant Point Attention)\n3D 구조 인식 attention"]
-        BB_UPD["Backbone Update\n(quaternion rotation)"]
-        SC["Side Chain\nTorsion Angles"]
+        FRAMES["Residue Frames<br/>(Rᵢ, tᵢ) × L<br/>독립적으로 예측"]
+        IPA4["IPA<br/>(Invariant Point Attention)<br/>3D 구조 인식 attention"]
+        BB_UPD["Backbone Update<br/>(quaternion rotation)"]
+        SC["Side Chain<br/>Torsion Angles"]
         FRAMES --> IPA4 --> BB_UPD --> FRAMES
         BB_UPD --> SC
     end
 
     subgraph FAPE_LOSS["FAPE Loss (핵심)"]
         direction LR
-        FRAME_DEF["Local Frame Tᵢ\n= (Rᵢ, Cαᵢ)\n(N, Cα, C로 Gram-Schmidt)"]
-        LOCAL_COORD["Local 좌표 변환\nTᵢ⁻¹(xⱼ)"]
-        DIST["dist(i,j) = ‖Tᵢ_pred⁻¹(xⱼ_pred)\n         - Tᵢ_true⁻¹(xⱼ_true)‖"]
-        FAPE_FINAL["L_FAPE = mean_ij[\nmin(dist(i,j), d_clamp)]"]
+        FRAME_DEF["Local Frame Tᵢ<br/>= (Rᵢ, Cαᵢ)<br/>(N, Cα, C로 Gram-Schmidt)"]
+        LOCAL_COORD["Local 좌표 변환<br/>Tᵢ⁻¹(xⱼ)"]
+        DIST["dist(i,j) = ‖Tᵢ_pred⁻¹(xⱼ_pred)<br/>         - Tᵢ_true⁻¹(xⱼ_true)‖"]
+        FAPE_FINAL["L_FAPE = mean_ij[<br/>min(dist(i,j), d_clamp)]"]
         FRAME_DEF --> LOCAL_COORD --> DIST --> FAPE_FINAL
     end
 
@@ -66,7 +61,6 @@ flowchart TB
     STRUCT_MOD --> FAPE_LOSS
 ```
 
-</details>
 
 ## 핵심 아이디어
 

@@ -16,33 +16,28 @@
 
 ## 핵심 아키텍처
 
-![[3_Resources/Papers/Paper_ReflexFlow25_ADR_arch.png]]
-
-<details>
-<summary>Mermaid source</summary>
-
 ```mermaid
-%%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
+%%{init: {'theme':'dark', 'flowchart': {'htmlLabels': true, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px', 'primaryColor': '#2d4a6e', 'primaryTextColor': '#e8eaf0', 'primaryBorderColor': '#5a8abf', 'lineColor': '#7ab3e0', 'secondaryColor': '#1e3a5a', 'tertiaryColor': '#162840', 'clusterBkg': '#1a2f45', 'clusterBorder': '#4a7aaa', 'titleColor': '#c8d8f0', 'edgeLabelBackground': '#1a2f45', 'nodeTextColor': '#e8eaf0'}}}%%
 flowchart TB
     subgraph PROBLEM2["Exposure Bias 문제"]
-        TRAIN_IN["학습 시 입력\nclean interpolant xₜ\n= x₀ + t·(x₁-x₀)"]
-        INFER_IN["추론 시 입력\nbiased state x̂ₜ\n= 이전 step 예측값"]
-        MISMATCH["Train-Test Mismatch\n→ 오차 누적"]
+        TRAIN_IN["학습 시 입력<br/>clean interpolant xₜ<br/>= x₀ + t·(x₁-x₀)"]
+        INFER_IN["추론 시 입력<br/>biased state x̂ₜ<br/>= 이전 step 예측값"]
+        MISMATCH["Train-Test Mismatch<br/>→ 오차 누적"]
         TRAIN_IN & INFER_IN --> MISMATCH
     end
 
     subgraph ADR["ADR (Anti-Drift Rectification)"]
         direction TB
-        STEP1["Step 1: v⁰θ = vθ(xₜ, t)\nclean input으로 forward\n(gradient 차단)"]
-        STEP2["Step 2: x̂_{t+dt} = xₜ + dt·stop_grad(v⁰θ)\nbiased state 시뮬레이션"]
-        STEP3["Step 3: v¹θ = vθ(x̂_{t+dt}, t+dt)\nbiased input으로 두 번째 forward"]
-        STEP4["Step 4: v_ADR = (x₁ - x̂_{t+dt}) / (1-(t+dt))\ncorrective velocity 계산"]
+        STEP1["Step 1: v⁰θ = vθ(xₜ, t)<br/>clean input으로 forward<br/>(gradient 차단)"]
+        STEP2["Step 2: x̂_{t+dt} = xₜ + dt·stop_grad(v⁰θ)<br/>biased state 시뮬레이션"]
+        STEP3["Step 3: v¹θ = vθ(x̂_{t+dt}, t+dt)<br/>biased input으로 두 번째 forward"]
+        STEP4["Step 4: v_ADR = (x₁ - x̂_{t+dt}) / (1-(t+dt))<br/>corrective velocity 계산"]
         STEP5["Step 5: L_ADR = SmoothL1(v¹θ, v_ADR)"]
         STEP1 --> STEP2 --> STEP3 & STEP4 --> STEP5
     end
 
     subgraph FC["FC (Frequency Compensation)"]
-        REWEIGHT["Low-frequency 성분\nloss reweighting\n(초기 timestep 강화)"]
+        REWEIGHT["Low-frequency 성분<br/>loss reweighting<br/>(초기 timestep 강화)"]
     end
 
     subgraph TOTAL_LOSS["최종 Loss"]
@@ -58,7 +53,6 @@ flowchart TB
     FC --> TOTAL_LOSS
 ```
 
-</details>
 
 ## 핵심 아이디어
 

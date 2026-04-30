@@ -16,41 +16,36 @@
 
 ## 핵심 아키텍처
 
-![[3_Resources/Papers/Paper_Bose24_AlphaFlow_arch.png]]
-
-<details>
-<summary>Mermaid source</summary>
-
 ```mermaid
-%%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
+%%{init: {'theme':'dark', 'flowchart': {'htmlLabels': true, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px', 'primaryColor': '#2d4a6e', 'primaryTextColor': '#e8eaf0', 'primaryBorderColor': '#5a8abf', 'lineColor': '#7ab3e0', 'secondaryColor': '#1e3a5a', 'tertiaryColor': '#162840', 'clusterBkg': '#1a2f45', 'clusterBorder': '#4a7aaa', 'titleColor': '#c8d8f0', 'edgeLabelBackground': '#1a2f45', 'nodeTextColor': '#e8eaf0'}}}%%
 flowchart TB
     subgraph INPUT4["입력"]
         SEQ4["Target 서열"]
-        PRIOR["Prior 구조\n(harmonic diffusion)"]
+        PRIOR["Prior 구조<br/>(harmonic diffusion)"]
     end
 
     subgraph PRETRAIN["Pretrained Backbone"]
-        AF2["AlphaFold2 / ESMFold\n(고정 또는 fine-tune)"]
+        AF2["AlphaFold2 / ESMFold<br/>(고정 또는 fine-tune)"]
     end
 
     subgraph FLOW2["Flow Matching (구조→구조)"]
         direction LR
-        X0AF["x₀ ~ p₀\n(harmonic polymer prior\nscale-invariant)"]
-        X1AF["x₁ ~ p_data\n(PDB 구조 또는 MD 앙상블)"]
-        XTAF["xₜ = (1-t)·x₀ + t·x₁\n(linear interpolation\non backbone frames)"]
+        X0AF["x₀ ~ p₀<br/>(harmonic polymer prior<br/>scale-invariant)"]
+        X1AF["x₁ ~ p_data<br/>(PDB 구조 또는 MD 앙상블)"]
+        XTAF["xₜ = (1-t)·x₀ + t·x₁<br/>(linear interpolation<br/>on backbone frames)"]
         X0AF --> XTAF
         X1AF --> XTAF
     end
 
     subgraph FINETUNED["Fine-tuned AlphaFlow"]
-        COND2["서열 + xₜ + t\n입력"]
-        AF_FT["AlphaFold2\n(fine-tuned)"]
-        PRED_X1["x₁ 예측\n(endpoint prediction)"]
+        COND2["서열 + xₜ + t<br/>입력"]
+        AF_FT["AlphaFold2<br/>(fine-tuned)"]
+        PRED_X1["x₁ 예측<br/>(endpoint prediction)"]
         COND2 --> AF_FT --> PRED_X1
     end
 
     subgraph FAPE2["Squared FAPE Loss"]
-        SFAPE["L = mean_ij[\n  (dist(i,j))²\n]\n(clamp 없는 squared 버전)"]
+        SFAPE["L = mean_ij[<br/>  (dist(i,j))²<br/>]<br/>(clamp 없는 squared 버전)"]
     end
 
     SEQ4 & PRIOR --> INPUT4
@@ -59,7 +54,6 @@ flowchart TB
     PRED_X1 --> FAPE2
 ```
 
-</details>
 
 ## 핵심 아이디어
 

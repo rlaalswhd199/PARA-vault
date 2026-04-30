@@ -16,37 +16,32 @@
 
 ## 핵심 아키텍처
 
-![[3_Resources/Papers/Paper_Wu24_FoldingDiff_arch.png]]
-
-<details>
-<summary>Mermaid source</summary>
-
 ```mermaid
-%%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
+%%{init: {'theme':'dark', 'flowchart': {'htmlLabels': true, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px', 'primaryColor': '#2d4a6e', 'primaryTextColor': '#e8eaf0', 'primaryBorderColor': '#5a8abf', 'lineColor': '#7ab3e0', 'secondaryColor': '#1e3a5a', 'tertiaryColor': '#162840', 'clusterBkg': '#1a2f45', 'clusterBorder': '#4a7aaa', 'titleColor': '#c8d8f0', 'edgeLabelBackground': '#1a2f45', 'nodeTextColor': '#e8eaf0'}}}%%
 flowchart TB
     subgraph INPUT["입력"]
-        SEQ["아미노산 서열\n(L residues)"]
-        NOISE["Random Angles\n(L, 6) — unfolded state"]
+        SEQ["아미노산 서열<br/>(L residues)"]
+        NOISE["Random Angles<br/>(L, 6) — unfolded state"]
     end
 
     subgraph REPR["각도 표현 (L, 6)"]
-        ANG["φ, ψ, ω\n(dihedral angles)\nτ, ∠CA:C:N, ∠C:N:CA\n(bond angles)"]
+        ANG["φ, ψ, ω<br/>(dihedral angles)<br/>τ, ∠CA:C:N, ∠C:N:CA<br/>(bond angles)"]
     end
 
     subgraph DIFFUSION["DDPM Denoising (T steps)"]
         T["Timestep t"]
-        BERT["BERT-style\nTransformer\n(1D sequence model)"]
-        PRED["예측 노이즈\nε̂_θ(xₜ, t)"]
+        BERT["BERT-style<br/>Transformer<br/>(1D sequence model)"]
+        PRED["예측 노이즈<br/>ε̂_θ(xₜ, t)"]
     end
 
     subgraph DECODE["NERF 재구성"]
-        NERF["Sequential NERF\nN₀→Cα₀→C₀→N₁→..."]
-        COORD["3D Backbone\nCoordinates"]
+        NERF["Sequential NERF<br/>N₀→Cα₀→C₀→N₁→..."]
+        COORD["3D Backbone<br/>Coordinates"]
     end
 
     subgraph PROBLEM["⚠️ Lever Arm Effect"]
-        ERR["N-terminal 각도 오차\nδθ ≈ 0.02 rad"]
-        AMP["C-terminal RMSD\n247× 증폭 → ~5 Å"]
+        ERR["N-terminal 각도 오차<br/>δθ ≈ 0.02 rad"]
+        AMP["C-terminal RMSD<br/>247× 증폭 → ~5 Å"]
         ERR --> AMP
     end
 
@@ -60,7 +55,6 @@ flowchart TB
     NERF -.->|"순차 누적"| PROBLEM
 ```
 
-</details>
 
 ## 핵심 아이디어
 

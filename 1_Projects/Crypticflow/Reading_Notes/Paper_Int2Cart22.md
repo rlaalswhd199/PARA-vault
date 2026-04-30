@@ -16,23 +16,18 @@
 
 ## 핵심 아키텍처
 
-![[3_Resources/Papers/Paper_Int2Cart22_arch.png]]
-
-<details>
-<summary>Mermaid source</summary>
-
 ```mermaid
-%%{init: {'theme':'base', 'flowchart': {'htmlLabels': false, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px'}}}%%
+%%{init: {'theme':'dark', 'flowchart': {'htmlLabels': true, 'curve': 'basis', 'nodeSpacing': 25, 'rankSpacing': 30, 'padding': 4, 'useMaxWidth': true}, 'themeVariables': {'fontSize': '12px', 'primaryColor': '#2d4a6e', 'primaryTextColor': '#e8eaf0', 'primaryBorderColor': '#5a8abf', 'lineColor': '#7ab3e0', 'secondaryColor': '#1e3a5a', 'tertiaryColor': '#162840', 'clusterBkg': '#1a2f45', 'clusterBorder': '#4a7aaa', 'titleColor': '#c8d8f0', 'edgeLabelBackground': '#1a2f45', 'nodeTextColor': '#e8eaf0'}}}%%
 flowchart LR
     subgraph INPUT5["입력"]
-        TOR["Backbone Torsion Angles\nφ, ψ, ω × L"]
-        RES["Residue Types\n(아미노산 종류)"]
+        TOR["Backbone Torsion Angles<br/>φ, ψ, ω × L"]
+        RES["Residue Types<br/>(아미노산 종류)"]
     end
 
     subgraph ML["Int2Cart ML 모델"]
-        NN["Neural Network\n(상관관계 학습)"]
-        BOND_PRED["Bond Lengths 예측\nd_CN, d_NCA, d_CAC"]
-        ANGLE_PRED["Bond Angles 예측\n∠C:N:CA, ∠N:CA:C, ∠CA:C:N"]
+        NN["Neural Network<br/>(상관관계 학습)"]
+        BOND_PRED["Bond Lengths 예측<br/>d_CN, d_NCA, d_CAC"]
+        ANGLE_PRED["Bond Angles 예측<br/>∠C:N:CA, ∠N:CA:C, ∠CA:C:N"]
     end
 
     subgraph NERF_CHAIN["Sequential NERF"]
@@ -44,12 +39,12 @@ flowchart LR
         DOTS["..."]
         NL["Nₗ"]
         N0 --> CA0 --> C0 --> N1 --> DOTS --> NL
-        note2["⚠️ 각 원자 위치가\n이전 3개 원자에 의존\n→ 오차 순차 누적"]
+        note2["⚠️ 각 원자 위치가<br/>이전 3개 원자에 의존<br/>→ 오차 순차 누적"]
     end
 
     subgraph OUTPUT2["출력 및 오차"]
         COORD2["3D Cartesian 좌표"]
-        ERR2["Reconstruction RMSD\n100-res 기준: ~2.07 Å\n전체 평균: ~3.74 Å"]
+        ERR2["Reconstruction RMSD<br/>100-res 기준: ~2.07 Å<br/>전체 평균: ~3.74 Å"]
         COORD2 --> ERR2
     end
 
@@ -59,7 +54,6 @@ flowchart LR
     NERF_CHAIN --> OUTPUT2
 ```
 
-</details>
 
 ## 핵심 아이디어
 
