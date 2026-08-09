@@ -1,5 +1,7 @@
 {
   "enabledCssSnippets": [
     "mermaid-fit"
-  ]
+  ],
+  "cssTheme": "Things",
+  "theme": "obsidian"
 }

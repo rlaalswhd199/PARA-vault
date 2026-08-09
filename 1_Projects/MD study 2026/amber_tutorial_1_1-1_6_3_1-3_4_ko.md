@@ -31,14 +31,14 @@ cpptraj, VMD, MMPBSA.py 등으로 분석
 
 핵심 파일은 다음과 같습니다.
 
-| 파일 | 의미 | 보통 누가 만드나 |
-|---|---|---|
-| `.pdb` | 원자 좌표가 들어 있는 구조 파일 | RCSB PDB, VMD, pdb4amber, cpptraj |
-| `.prmtop`, `.parm7`, `.top` | topology/parameter 파일. 원자, 결합, 전하, force field 정보 | `tleap` |
-| `.inpcrd`, `.rst7`, `.crd` | 좌표 또는 restart 좌표 파일 | `tleap`, `pmemd`, `sander` |
-| `.in`, `.mdin` | MD/minimization 입력 옵션 | 사용자가 작성 |
-| `.out`, `.mdout` | 실행 로그와 에너지 출력 | `pmemd`, `sander` |
-| `.nc`, `.mdcrd` | trajectory | `pmemd`, `sander` |
+| 파일                          | 의미                                                | 보통 누가 만드나                         |
+| --------------------------- | ------------------------------------------------- | --------------------------------- |
+| `.pdb`                      | 원자 좌표가 들어 있는 구조 파일                                | RCSB PDB, VMD, pdb4amber, cpptraj |
+| `.prmtop`, `.parm7`, `.top` | topology/parameter 파일. 원자, 결합, 전하, force field 정보 | `tleap`                           |
+| `.inpcrd`, `.rst7`, `.crd`  | 좌표 또는 restart 좌표 파일                               | `tleap`, `pmemd`, `sander`        |
+| `.in`, `.mdin`              | MD/minimization 입력 옵션                             | 사용자가 작성                           |
+| `.out`, `.mdout`            | 실행 로그와 에너지 출력                                     | `pmemd`, `sander`                 |
+| `.nc`, `.mdcrd`             | trajectory                                        | `pmemd`, `sander`                 |
 
 실습 전에 터미널에서 아래를 확인하세요.
 
@@ -1227,18 +1227,18 @@ perl -0777 -pi -e 's/nstlim\s*=\s*25000000/nstlim = 5000/' md.test.mdin
 
 ### 주요 옵션 해석
 
-| 옵션 | 의미 |
-|---|---|
-| `nstlim` | MD step 수. `nstlim × dt`가 전체 시간(ps)입니다. |
-| `dt=0.002` | 0.002 ps = 2 fs |
-| `ntpr` | mdout에 에너지/온도 등을 출력하는 주기 |
-| `ntwx` | trajectory 좌표를 쓰는 주기 |
-| `ntwr` | restart 파일을 쓰는 주기 |
-| `ntt=3` | Langevin thermostat |
-| `ig=-1` | 매 실행마다 시간 기반 random seed |
-| `ntb=2`, `ntp=1` | periodic box에서 constant pressure |
-| `ntc=2`, `ntf=2` | H 결합 SHAKE/force 생략 설정 |
-| `ioutfm=1` | NetCDF trajectory 형식 |
+| 옵션               | 의미                                      |
+| ---------------- | --------------------------------------- |
+| `nstlim`         | MD step 수. `nstlim × dt`가 전체 시간(ps)입니다. |
+| `dt=0.002`       | 0.002 ps = 2 fs                         |
+| `ntpr`           | mdout에 에너지/온도 등을 출력하는 주기                |
+| `ntwx`           | trajectory 좌표를 쓰는 주기                    |
+| `ntwr`           | restart 파일을 쓰는 주기                       |
+| `ntt=3`          | Langevin thermostat                     |
+| `ig=-1`          | 매 실행마다 시간 기반 random seed                |
+| `ntb=2`, `ntp=1` | periodic box에서 constant pressure        |
+| `ntc=2`, `ntf=2` | H 결합 SHAKE/force 생략 설정                  |
+| `ioutfm=1`       | NetCDF trajectory 형식                    |
 
 50 ns 계산 확인:
 
